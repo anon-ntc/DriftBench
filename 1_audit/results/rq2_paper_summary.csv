@@ -1,0 +1,4 @@
+dimension,included_papers,documented_holdout,documented_no_holdout,not_documented
+client,109,14,57,38
+network,109,16,65,28
+temporal,109,20,55,34

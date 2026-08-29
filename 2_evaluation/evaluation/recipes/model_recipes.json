@@ -1,0 +1,415 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "recipe_set_id": "driftbench-payload-start-seven-model-recipes-v1",
+  "status": "declarative_reference_recipes",
+  "reference_command_policy": {
+    "commands_are_argv_arrays": true,
+    "argv_are_reference_only": true,
+    "argv_are_executable": false,
+    "execution_supported": false,
+    "internal_run_control_arguments_included": false,
+    "paths_are_runner_root_relative_templates": true,
+    "historical_execution_requires_external_compatible_checkout_or_refactor": true
+  },
+  "routing": {
+    "lim": {"all": "lim"},
+    "nprintml": {"all": "nprintml"},
+    "yatc": {"all": "yatc"},
+    "trafficformer": {"all": "trafficformer"},
+    "mhnet": {"all": "mhnet"},
+    "tfe_gnn": {"all": "tfe_gnn"},
+    "etbert": {"all": "etbert"}
+  },
+  "variants": {
+    "lim": {
+      "variant_id": "lim",
+      "model_key": "lim",
+      "display_name": "LiM",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "first five payload-bearing TCP packets as ordered IPv4-total-length, IPv4-TTL, and IAT triples; trailing packet triples are NaN rather than zero-filled",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "StandardScaler; NaN mask preserved"
+      },
+      "training": {
+        "runner": "scripts/run_table3_lim_source_train_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cpu",
+        "hyperparameters": {
+          "estimator": "XGBoost multi:softprob",
+          "tree_method": "hist",
+          "maximum_boost_rounds": 100,
+          "early_stopping_rounds": 10,
+          "evaluation_metric": "source-validation mlogloss",
+          "nthread": 1
+        },
+        "selection": "minimum source-validation mlogloss",
+        "reference_argv": [
+          "{python}",
+          "{runner_scripts}/run_table3_lim_source_train_v1.py",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output-root", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cpu"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_lim_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "lim",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cpu"
+        ]
+      }
+    },
+    "nprintml": {
+      "variant_id": "nprintml",
+      "model_key": "nprintml",
+      "display_name": "nPrintML",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "nPrint packet-header bit features extracted by the pinned nPrint 1.2.1 CLI and consumed by nPrintML/AutoGluon",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "nPrintML tabular preprocessing and model fitting"
+      },
+      "training": {
+        "runner": "scripts/run_table3_nprintml_source_train_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cpu",
+        "hyperparameters": {
+          "preset": "medium_quality_faster_train",
+          "time_limit_seconds_per_seed": 300,
+          "evaluation_metric": "accuracy",
+          "num_bag_folds": 0,
+          "num_stack_levels": 0,
+          "num_gpus": 0,
+          "refit_full": false
+        },
+        "selection": "source-validation tuning_data only; AutoGluon internal selection within the fixed budget",
+        "reference_argv": [
+          "{python}",
+          "{runner_scripts}/run_table3_nprintml_source_train_v1.py",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output-root", "{output_root}/training/{variant_id}/{source}",
+          "--workers", "16", "--cpus", "16"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_nprintml_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "nprintml",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cpu"
+        ]
+      }
+    },
+    "yatc": {
+      "variant_id": "yatc",
+      "model_key": "yatc",
+      "display_name": "YaTC",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "five packets with 80 header bytes and 240 payload bytes per packet, shaped as the upstream 1x40x40 MFR input",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "upstream YaTC MFR construction"
+      },
+      "training": {
+        "runner": "scripts/run_table3_yatc_source_train_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cuda:0",
+        "hyperparameters": {
+          "maximum_epochs": 200,
+          "warmup_epochs": 20,
+          "batch_size": 64,
+          "base_learning_rate": 0.002,
+          "effective_learning_rate": 0.0005,
+          "minimum_learning_rate": 0.000001,
+          "weight_decay": 0.05,
+          "layer_decay": 0.75,
+          "label_smoothing": 0.1,
+          "early_stopping_patience": 10,
+          "early_stopping_min_delta": 0.001
+        },
+        "selection": "maximum source-validation Macro-F1, then accuracy, minimum cross-entropy, and earliest epoch",
+        "reference_argv": [
+          "{python}",
+          "{runner_scripts}/run_table3_yatc_source_train_v1.py",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output-root", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cuda:0"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_yatc_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "yatc",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cuda:0"
+        ]
+      }
+    },
+    "trafficformer": {
+      "variant_id": "trafficformer",
+      "model_key": "trafficformer",
+      "display_name": "TrafficFormer",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "first five frames, 64 bytes per frame, nibble-bigram tokenization, sequence length 320",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "upstream TrafficFormer token construction"
+      },
+      "training": {
+        "runner": "scripts/run_table3_trafficformer_source_train_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cuda:0",
+        "hyperparameters": {
+          "maximum_epochs": 12,
+          "minimum_epochs": 4,
+          "effective_batch_size": 128,
+          "microbatch_size": 64,
+          "learning_rate": 0.00006,
+          "warmup_fraction": 0.1,
+          "early_stopping_patience": 3,
+          "early_stopping_min_delta": 0.001,
+          "one_time_seeded_shuffle": true
+        },
+        "selection": "maximum source-validation Macro-F1; exact ties retain earliest epoch",
+        "reference_argv": [
+          "{python}",
+          "{runner_scripts}/run_table3_trafficformer_source_train_v1.py",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output-root", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cuda:0"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_trafficformer_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "trafficformer",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cuda:0"
+        ]
+      }
+    },
+    "mhnet": {
+      "variant_id": "mhnet",
+      "model_key": "mhnet",
+      "display_name": "MH-Net M8",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "first 15 payload-bearing packets, 8-bit graph view, packed valid-length BiLSTM",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "graph and packet tensors from source development roles"
+      },
+      "training": {
+        "runner": "scripts/run_payload_start_matrix_source_training_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cuda:0",
+        "hyperparameters": {
+          "candidate": "M8",
+          "continuation_base": "M3",
+          "epochs": 25,
+          "batch_size": 24,
+          "learning_rate": 0.003,
+          "minimum_learning_rate": 0.00001,
+          "warmup_fraction": 0.05,
+          "gradient_clip_norm": 1.0,
+          "weight_decay": 0.0005,
+          "loss_weights": {"flow": 1.0, "packet": 1.0, "sequence": 0.0, "graph": 0.0},
+          "early_stopping_minimum_epochs": 5,
+          "early_stopping_patience": 8,
+          "early_stopping_min_delta": 0.001
+        },
+        "selection": "maximum source-validation Macro-F1",
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_source_training_v1.py",
+          "--model", "mhnet", "--source", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cuda:0"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_mhnet_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "mhnet",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cuda:0"
+        ]
+      }
+    },
+    "tfe_gnn": {
+      "variant_id": "tfe_gnn",
+      "model_key": "tfe_gnn",
+      "display_name": "TFE-GNN T4",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "aligned payload pairs with packed valid lengths",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "aligned-pair graph tensors from source development roles"
+      },
+      "training": {
+        "runner": "scripts/run_payload_start_matrix_source_training_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cuda:0",
+        "hyperparameters": {
+          "candidate": "T4",
+          "epochs": 40,
+          "batch_size": 102,
+          "learning_rate": 0.003,
+          "minimum_learning_rate": 0.0001,
+          "warmup_fraction": 0.05,
+          "gradient_accumulation": 1,
+          "gradient_clip_norm": 1.0,
+          "hidden_features": 128,
+          "dropout": 0.2,
+          "downstream_dropout": 0.0,
+          "weight_decay": 0.0,
+          "early_stopping_minimum_epochs": 5,
+          "early_stopping_patience": 12,
+          "early_stopping_min_delta": 0.001
+        },
+        "selection": "maximum source-validation Macro-F1",
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_source_training_v1.py",
+          "--model", "tfe_gnn", "--source", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cuda:0"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_tfe_gnn_backend_v1.py",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "tfe_gnn",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cuda:0"
+        ]
+      }
+    },
+    "etbert": {
+      "variant_id": "etbert",
+      "model_key": "etbert",
+      "display_name": "ET-BERT",
+      "session_separation": "source train/validation and target test are session-disjoint",
+      "training_unit": "session",
+      "representation": "one ET-BERT document per session, formed from the session's ordered payload-bearing Ethernet/IPv4/TCP frames using adjacent-byte-bigram tokenization and sequence length 128",
+      "preprocessing": {
+        "execution": "integrated_into_training_wrapper",
+        "training_roles_only": true,
+        "source_train_only_fit": "session documents are constructed independently within the canonical source train and validation roles"
+      },
+      "training": {
+        "runner": "scripts/run_payload_start_matrix_source_training_v1.py",
+        "seed_scope": [0, 1, 2],
+        "device": "cuda:0",
+        "hyperparameters": {
+          "maximum_epochs": 15,
+          "minimum_epochs": 10,
+          "batch_size": 32,
+          "learning_rate": 0.00003,
+          "dropout": 0.1,
+          "warmup_fraction": 0.1,
+          "sequence_length": 128,
+          "early_stopping_patience": 3,
+          "early_stopping_min_delta": 0.001
+        },
+        "selection": "maximum source-validation Macro-F1, then accuracy, minimum cross-entropy, and earliest epoch",
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_source_training_v1.py",
+          "--model", "etbert", "--source", "{source}",
+          "--dataset-root", "{dataset_root}",
+          "--output", "{output_root}/training/{variant_id}/{source}",
+          "--device", "cuda:0"
+        ]
+      },
+      "evaluation": {
+        "unit": "session",
+        "role": "frozen_target_test",
+        "canonical_target_test_used": true,
+        "adapter": "scripts/payload_start_matrix_etbert_backend_v1.py; one ordered session document and exactly one prediction per session",
+        "postfilter_to_covered_job_ids": true,
+        "reference_argv": [
+          "{python}", "{runner_scripts}/run_payload_start_matrix_evaluator_v1.py",
+          "--model", "etbert",
+          "--source-configuration", "{source}",
+          "--dataset-root", "{dataset_root}", "--device", "cuda:0"
+        ]
+      }
+    }
+  },
+  "source_code_authorities": {
+    "table3_source_wrappers": {
+      "scripts/run_table3_lim_source_train_v1.py": "6107c7e209bb9cd41aab0fe89f159c99039e285608f24d9dec93826266e293ba",
+      "scripts/run_table3_nprintml_source_train_v1.py": "ad3b71e5031bc95faaf958a35f37c4cafdda927ddfbff584992ad39037ede492",
+      "scripts/run_table3_yatc_source_train_v1.py": "6ded0073038f939eea753c43a942913d9b7c59a47792bb5c4c36b7787807726b",
+      "scripts/run_table3_trafficformer_source_train_v1.py": "db906c3913c0b585f5fd645be4346585aa17d3a525d217e8cb774b1e87523ab3"
+    },
+    "evaluation_backends": {
+      "scripts/payload_start_matrix_lim_backend_v1.py": "e2626ea0c1d03a21d474dc8700d61b0860232fd7e54ef7f9195fe961b991e2fa",
+      "scripts/payload_start_matrix_nprintml_backend_v1.py": "ee02543d4dd1139e2ba372ef1db0362f640bfb8d17f29196bf387a522b51a80d",
+      "scripts/payload_start_matrix_yatc_backend_v1.py": "06e79f69838ba826060590aecf425398c0ce7a9d7c354acbf4039ed4f468c09a",
+      "scripts/payload_start_matrix_trafficformer_backend_v1.py": "0575c11e44748e48830e77b76e8d8f1d4b23591246fadf06d9a5c512b25d62c0",
+      "scripts/payload_start_matrix_mhnet_backend_v1.py": "1b778800a09d547bc2c3f1ce84fcccbac8429ecd7f2ea3b6fd12015baf0aad4b",
+      "scripts/payload_start_matrix_tfe_gnn_backend_v1.py": "163e749adc75777959612a96f30a587a4e39b02c0a1a7f7d9e2fb234ec93d054",
+      "scripts/payload_start_matrix_etbert_backend_v1.py": "54c931222d6616bb3f1ac11a319b9a26bc9214fe7b7fcd01225f75ad1a195659"
+    },
+    "standard_source_runner": {
+      "repository_relative_path": "scripts/run_payload_start_matrix_source_training_v1.py",
+      "sha256": "a1170192d6544e7150f321378d45ad5a87e34e46759cdb51bea7855b82717e0c"
+    },
+    "matrix_evaluator": {
+      "repository_relative_path": "scripts/run_payload_start_matrix_evaluator_v1.py",
+      "sha256": "73fa38c8d7176388c24f4fa1530ae4874cc23499cc2eca79a0c73cf14aefc4f4"
+    },
+    "backend_pinset": {
+      "repository_relative_path": "scripts/payload_start_matrix_backend_pinset_v1.json",
+      "sha256": "abb38028e5b93625a87180787bc2af55a289184be4097d991f65d5d7159e5026"
+    }
+  }
+}

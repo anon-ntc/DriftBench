@@ -1,0 +1,15 @@
+reason_code,reason_label,records
+E01,Out of publication boundary,5413
+E02,Non-full publication,12
+E03,No qualifying traffic input,42947
+E04,No learned classifier,164
+E05,No supervised fixed-label task,25
+E06,Classification ancillary,6
+E07,"Rule, lookup, or DPI only",2
+E08,Active probing,3
+E09,Defense or obfuscation,64
+E10,Adversarial or generative support,23
+E11,Pure multilabel task,4
+E12,Operational or support label,63
+E13,Non-primary classifier study,41
+I01,Included,109

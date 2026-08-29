@@ -1,0 +1,10 @@
+stage,records
+DBLP records enumerated,48876
+Duplicate records removed,0
+Records removed by publication filtering,5413
+Records retained for candidate identification,43463
+Retained records outside the candidate-review frame,41892
+Unique records in the candidate-review frame,1571
+Candidates excluded by eligibility review,1462
+Papers included in the final corpus,109
+Unresolved candidate records,0

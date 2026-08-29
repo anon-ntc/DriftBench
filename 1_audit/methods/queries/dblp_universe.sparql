@@ -1,0 +1,59 @@
+PREFIX dblp: <https://dblp.org/rdf/schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?publ ?stream ?year
+       (SAMPLE(?title0) AS ?title)
+       (GROUP_CONCAT(DISTINCT ?authorName) AS ?authors)
+       (SAMPLE(?toc0) AS ?toc)
+       (SAMPLE(?part0) AS ?proceedings)
+       (SAMPLE(?venue0) AS ?venueLabel)
+       (SAMPLE(?pages0) AS ?pages)
+       (SAMPLE(?doi0) AS ?doi)
+       (SAMPLE(?document0) AS ?documentPage)
+       (GROUP_CONCAT(DISTINCT STR(?type0)) AS ?rdfTypes)
+WHERE {
+  VALUES ?stream {
+    <https://dblp.org/streams/conf/sp>
+    <https://dblp.org/streams/conf/ccs>
+    <https://dblp.org/streams/conf/uss>
+    <https://dblp.org/streams/conf/ndss>
+    <https://dblp.org/streams/conf/sigcomm>
+    <https://dblp.org/streams/conf/nsdi>
+    <https://dblp.org/streams/conf/sigmetrics>
+    <https://dblp.org/streams/conf/aaai>
+    <https://dblp.org/streams/conf/nips>
+    <https://dblp.org/streams/conf/www>
+    <https://dblp.org/streams/conf/asiaccs>
+    <https://dblp.org/streams/conf/raid>
+    <https://dblp.org/streams/conf/dsn>
+    <https://dblp.org/streams/journals/popets>
+    <https://dblp.org/streams/conf/conext>
+    <https://dblp.org/streams/conf/imc>
+  }
+  VALUES ?year {
+    "2020"^^xsd:gYear
+    "2021"^^xsd:gYear
+    "2022"^^xsd:gYear
+    "2023"^^xsd:gYear
+    "2024"^^xsd:gYear
+    "2025"^^xsd:gYear
+  }
+  ?publ dblp:publishedInStream ?stream .
+  ?publ dblp:yearOfPublication ?year .
+  ?publ dblp:title ?title0 .
+  ?publ rdf:type ?type0 .
+  OPTIONAL {
+    ?publ dblp:authoredBy ?author .
+    ?author rdfs:label ?authorName .
+  }
+  OPTIONAL { ?publ dblp:listedOnTocPage ?toc0 . }
+  OPTIONAL { ?publ dblp:publishedAsPartOf ?part0 . }
+  OPTIONAL { ?publ dblp:publishedIn ?venue0 . }
+  OPTIONAL { ?publ dblp:pagination ?pages0 . }
+  OPTIONAL { ?publ dblp:doi ?doi0 . }
+  OPTIONAL { ?publ dblp:primaryDocumentPage ?document0 . }
+}
+GROUP BY ?publ ?stream ?year
+ORDER BY ?stream ?year ?title

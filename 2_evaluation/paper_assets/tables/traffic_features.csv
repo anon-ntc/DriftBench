@@ -1,0 +1,29 @@
+feature,source_packet_field,analysis_status,data_type,distance_metric,scope,description,termination_sensitive,composite_family,composite_included,redundancy,exclusion_reason
+frame_length_bytes,frame_len,included,numeric,weighted_ks,marginal,Captured Ethernet-frame length including minimum-frame padding,false,size_packetization,false,"frame_len=max(60,ip_total_len+14)",
+ip_total_length_bytes,ip_total_len,included,numeric,weighted_ks,marginal_and_first50,IPv4 total length,false,size_packetization,true,canonical representative of the three deterministic length fields,
+tcp_payload_length_bytes,payload_len,included,numeric,weighted_ks,marginal_and_first50,TCP payload length,false,size_packetization,false,payload_len=ip_total_len-40,
+ipv4_ttl,ttl,included,numeric,weighted_ks,marginal_and_first50,Observed IPv4 TTL/hop-limit field,false,host_path,true,,
+tcp_window_raw,tcp_window,included,numeric,weighted_ks,marginal_and_first50,Raw advertised TCP window; scaling is unavailable and not applied,false,host_path,true,,
+iat_us,iat_us,included,numeric,weighted_ks,marginal_and_first50,Adjacent retained-packet inter-arrival time in microseconds; position 1 is missing,false,timing,true,,
+direction,direction,included,categorical,total_variation,marginal_and_first50,Relative packet direction: c2s or s2c,false,direction_flags,true,,
+tcp_flag_pattern,tcp_flags,included,categorical,total_variation,marginal,Exact retained eight-bit TCP flag pattern; FIN/RST-bearing patterns are termination-sensitive,pattern_dependent_fin_or_rst,direction_flags,true,,
+signed_ip_total_length_bytes,signed_ip_total_len,included_derived,numeric,weighted_ks,first50,IPv4 total length signed positive c2s and negative s2c,false,first50_only,false,derived from ip_total_len and direction,
+mac_addresses,mac_addresses,excluded,identifier,,none,Ethernet endpoint addresses,false,,false,,deterministic pseudonymous identifier
+ip_addresses,ip_addresses,excluded,identifier,,none,IPv4 endpoint addresses,false,,false,,deterministic pseudonymous identifier
+tcp_ports,tcp_ports,excluded,identifier,,none,TCP endpoint ports,false,,false,,deterministic pseudonymous identifier
+tcp_sequence,tcp_sequence,excluded,identifier,,none,TCP sequence number,false,,false,,deterministic pseudonymous sequence space
+tcp_acknowledgement,tcp_acknowledgement,excluded,identifier,,none,TCP acknowledgement number,false,,false,,deterministic pseudonymous sequence space
+ipv4_id,ipv4_id,excluded,constant,,none,IPv4 identification,false,,false,,sanitizer-fixed constant
+ipv4_checksum,ipv4_checksum,excluded,integrity,,none,IPv4 header checksum,false,,false,,integrity field
+tcp_checksum,tcp_checksum,excluded,integrity,,none,TCP checksum,false,,false,,integrity field
+absolute_timestamp,absolute_timestamp,excluded,timestamp,,none,Synthetic absolute packet timestamp,false,,false,,"fixed campaign anchor, not collection time"
+path_filename_hash,path_filename_hash,excluded,identifier,,none,"Paths, filenames, sample IDs, and hashes",false,,false,,identifier/provenance only
+ipv4_ihl,ipv4_ihl,excluded,constant,,none,IPv4 header length,false,,false,,invariant 20-byte header
+ipv4_dscp_ecn,ipv4_dscp_ecn,excluded,constant,,none,IPv4 DSCP/ECN,false,,false,,invariant zero
+tcp_header_len_options,tcp_header_len_options,excluded,constant,,none,TCP header length and options,false,,false,,invariant 20-byte header with no options
+session_duration,session_duration,excluded,aggregate,,none,Last-minus-first retained timestamp,true,,false,,depends on observed termination/capture endpoint
+packet_count,packet_count,excluded,aggregate,,none,Retained packets per session,true,,false,,depends on observed termination and sanitizer cap
+total_bytes,total_bytes,excluded,aggregate,,none,Retained bytes per session,true,,false,,depends on observed termination and packet count
+encrypted_payload_values,encrypted_payload_values,excluded,payload,,none,Encrypted application payload byte values,false,,false,,not an interpretable traffic characteristic
+tls_record_interpretation,tls_record_interpretation,excluded,payload,,none,Inferred TLS record types or semantics,false,,false,,not reliably observable without TLS secrets
+session_view_index,,grouping_surrogate_only,opaque_ordinal,,weighting_and_recomputation_only,Deterministic analysis-local ordinal used only to give each protocol view equal mass; it is not an analytic feature or source identifier,false,,false,,never analyzed as a traffic characteristic

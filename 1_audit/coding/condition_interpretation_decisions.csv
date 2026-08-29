@@ -1,0 +1,78 @@
+condition_decision_id,record_type,decision_record_id,outcome,condition_pair,decision_basis
+CI0001,rq1_scheme,R1S0005,documented_no_support,,The documented contrast changes only a Tor overlay and does not establish two qualifying physical network values.
+CI0002,rq1_scheme,R1S0014,documented_no_support,,The documented contrast changes only a VPN overlay and does not establish two qualifying physical network values.
+CI0003,rq1_scheme,R1S0080,documented_no_support,,The documented contrast changes only a Tor overlay and does not establish two qualifying physical network values.
+CI0004,rq1_scheme,R1S0074,documented_no_support,,The documented contrast changes only a Tor overlay and does not establish two qualifying physical network values.
+CI0005,rq1_scheme,R1S0227,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0006,rq1_scheme,R1S0284,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0007,rq1_scheme,R1S0350,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0008,rq1_scheme,R1S0356,documented_no_support,,The documented contrast changes only Tor guards and does not establish two qualifying physical network values.
+CI0009,rq1_scheme,R1S0359,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0010,rq1_scheme,R1S0377,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0011,rq1_scheme,R1S0644,documented_no_support,,The documented contrast changes only a VPN overlay and does not establish two qualifying physical network values.
+CI0012,rq1_scheme,R1S0698,documented_no_support,,The documented contrast changes only a VPN overlay and does not establish two qualifying physical network values.
+CI0013,rq1_scheme,R1S0731,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0014,rq1_scheme,R1S0860,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0015,rq1_scheme,R1S0863,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0016,rq1_scheme,R1S0938,documented_no_support,,The documented contrast changes only VPN providers or gateways and does not establish two qualifying client access networks.
+CI0017,rq1_scheme,R1S0992,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0018,rq1_scheme,R1S0995,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0019,rq1_scheme,R1S1022,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0020,rq1_scheme,R1S1040,documented_no_support,,The documented contrast changes only software-controlled QoS settings and does not establish two qualifying physical network values.
+CI0021,rq1_scheme,R1S1043,documented_no_support,,The documented contrast changes only software-controlled QoS settings and does not establish two qualifying physical network values.
+CI0022,rq1_scheme,R1S1052,documented_no_support,,The documented contrast changes only software-controlled QoS settings and does not establish two qualifying physical network values.
+CI0023,rq1_scheme,R1S1067,documented_no_support,,The documented contrast changes only tunnel implementations and does not establish two qualifying physical network values.
+CI0024,rq1_scheme,R1S1073,documented_no_support,,The documented contrast changes only traffic shaping and does not establish two qualifying physical network values.
+CI0025,rq1_scheme,R1S1097,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0026,rq1_scheme,R1S1103,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0027,rq1_scheme,R1S1112,documented_no_support,,The documented contrast changes only Tor routes or circuits and does not establish two qualifying physical network values.
+CI0028,rq1_scheme,R1S1121,documented_no_support,,The documented contrast changes only tunnel or transport settings and does not establish two qualifying physical network values.
+CI0029,rq1_scheme,R1S1208,documented_no_support,,The documented contrast changes only simulated network parameters and does not establish two qualifying physical network values.
+CI0030,rq1_scheme,R1S1214,documented_no_support,,The documented contrast changes only synthetic bandwidth settings and does not establish two qualifying physical network values.
+CI0031,rq1_scheme,R1S0983,not_documented,,The source calls the captures different network environments but does not identify a qualifying site access network technology ISP or upstream provider.
+CI0032,rq1_scheme,R1S0371,supported,JP-US cloud-site pair versus JP-UK cloud-site pair,The complete scheme was freshly replayed across distinct physical cloud-site pairs. Resolver identity is not used as the qualifying network contrast.
+CI0033,rq1_scheme,R1S0833,documented_no_support,single LBNL Internet-border capture | no second qualifying network,All evaluated SSH traffic is recorded at one institute Internet border. Artificial user mismatch negatives and congestion variation do not create another physical network.
+CI0034,rq1_scheme,R1S0908,not_documented,,The reported country is the remote SMS destination rather than the client observation site or access network.
+CI0035,rq1_scheme,R1S0905,not_documented,,The reported country is the remote SMS destination rather than the client observation site or access network.
+CI0036,rq1_scheme,R1S0587,documented_no_support,,The second value is simulated bandwidth congestion on one fixed wireless access point rather than a qualifying network value.
+CI0037,rq1_scheme,R1S0728,not_documented,,Remote online services and customer logs do not establish distinct client observation sites or access networks.
+CI0038,rq2_design,R2D0728,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0039,rq2_design,R2D0731,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0040,rq2_design,R2D0737,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0041,rq2_design,R2D0752,documented_no_holdout,,The design partitions only Tor guards rather than a qualifying network condition.
+CI0042,rq2_design,R2D0788,documented_no_holdout,,The design partitions only resolver or obfuscation settings rather than a qualifying network condition.
+CI0043,rq2_design,R2D1058,documented_no_holdout,,The design partitions only a VPN or tunnel property rather than a qualifying network condition.
+CI0044,rq2_design,R2D1199,documented_no_holdout,,The design partitions only VPN providers or gateways rather than a qualifying client access network.
+CI0045,rq2_design,R2D1298,documented_no_holdout,,The design partitions only software-controlled QoS settings rather than a qualifying network condition.
+CI0046,rq2_design,R2D1328,documented_no_holdout,,The design partitions only traffic-shaping settings rather than a qualifying network condition.
+CI0047,rq2_design,R2D1355,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0048,rq2_design,R2D1358,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0049,rq2_design,R2D1361,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0050,rq2_design,R2D1364,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0051,rq2_design,R2D1385,documented_no_holdout,,The design partitions only Tor routes or circuits rather than a qualifying network condition.
+CI0052,rq2_design,R2D1466,documented_no_holdout,,The design partitions only simulated network parameters rather than a qualifying network condition.
+CI0053,rq2_design,R2D1469,documented_no_holdout,,The design partitions only simulated network parameters rather than a qualifying network condition.
+CI0054,rq2_design,R2D1472,documented_no_holdout,,The design partitions only simulated network parameters rather than a qualifying network condition.
+CI0055,rq2_design,R2D1475,documented_no_holdout,,The design partitions only simulated network parameters rather than a qualifying network condition.
+CI0056,rq2_design,R2D1478,documented_no_holdout,,The design partitions only simulated network parameters rather than a qualifying network condition.
+CI0057,rq2_design,R2D1229,not_documented,,The source does not identify whether its different network environments correspond to qualifying physical network values.
+CI0058,rq2_design,R2D0251,not_documented,,Distinct corpus provenance does not by itself identify a qualifying physical network contrast.
+CI0059,rq2_design,R2D0257,not_documented,,Distinct corpus provenance does not by itself identify a qualifying physical network contrast.
+CI0060,rq2_design,R2D0254,not_documented,,Distinct corpus provenance does not by itself identify a qualifying physical network contrast.
+CI0061,rq2_design,R2D0260,not_documented,,Distinct corpus provenance does not by itself identify a qualifying physical network contrast.
+CI0062,rq2_design,R2D0356,documented_no_holdout,,The design changes only simulated bandwidth congestion within one fixed-access-point testbed.
+CI0063,rq2_design,R2D0440,documented_no_holdout,,The design groups generated scenarios and replayed traffic sources rather than a qualifying network condition.
+CI0064,rq2_design,R2D0443,documented_no_holdout,,The design groups generated scenarios and replayed traffic sources rather than a qualifying network condition.
+CI0065,rq2_design,R2D0446,documented_no_holdout,,The design groups generated scenarios and replayed traffic sources rather than a qualifying network condition.
+CI0066,rq2_design,R2D0449,documented_no_holdout,,The design groups generated scenarios and replayed traffic sources rather than a qualifying network condition.
+CI0067,rq1_scheme,R1S0577,not_documented,,"The paper identifies five volunteers but does not document differences in hardware, operating system, application, browser, library, or execution environment among them."
+CI0068,rq1_scheme,R1S0580,not_documented,,"The paper identifies five volunteers but does not document differences in hardware, operating system, application, browser, library, or execution environment among them."
+CI0069,rq1_scheme,R1S0583,not_documented,,"The paper identifies five volunteers but does not document differences in hardware, operating system, application, browser, library, or execution environment among them."
+CI0070,rq1_scheme,R1S0766,not_documented,,The human corpus identifies five volunteers but does not document qualifying client-configuration differences among them.
+CI0071,rq1_scheme,R1S0769,not_documented,,The human corpus identifies five volunteers but does not document qualifying client-configuration differences among them.
+CI0072,rq1_scheme,R1S1291,documented_no_support,,"The documented contrast changes HTTP cache state within the same Chrome, Linux, and Docker browsing environment rather than the client configuration."
+CI0073,rq1_scheme,R1S1294,documented_no_support,,"The documented contrast changes a custom User Agent within the same Chrome, Linux, and Docker browsing environment rather than the client configuration."
+CI0074,rq2_design,R2D0460,not_documented,,"The design holds out volunteer identity, but the paper does not report qualifying client-configuration membership for the volunteers."
+CI0075,rq2_design,R2D0463,not_documented,,"The design holds out volunteer identity, but the paper does not report qualifying client-configuration membership for the volunteers."
+CI0076,rq2_design,R2D1603,documented_no_holdout,,"The design partitions HTTP cache state within the same Chrome, Linux, and Docker environment rather than a client condition."
+CI0077,rq2_design,R2D1609,documented_no_holdout,,"The design partitions a spoofed User Agent within the same Chrome, Linux, and Docker environment rather than a client condition."

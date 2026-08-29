@@ -1,0 +1,17 @@
+venue,abbreviation,full_name,venue_family,start_year,end_year,dblp_stream_url,venue_specific_handling
+USENIX Security,USENIX Security,USENIX Security Symposium,Security and privacy,2020,2025,https://dblp.org/streams/conf/uss,Main archival research proceedings retained
+ACM CCS,ACM CCS,ACM Conference on Computer and Communications Security,Security and privacy,2020,2025,https://dblp.org/streams/conf/ccs,Main archival research proceedings retained
+IEEE S&P,IEEE S&P,IEEE Symposium on Security and Privacy,Security and privacy,2020,2025,https://dblp.org/streams/conf/sp,Main archival research proceedings retained
+NDSS,NDSS,Network and Distributed System Security Symposium,Security and privacy,2020,2025,https://dblp.org/streams/conf/ndss,Main archival research proceedings retained
+AsiaCCS,AsiaCCS,ACM Asia Conference on Computer and Communications Security,Security and privacy,2020,2025,https://dblp.org/streams/conf/asiaccs,Main archival research proceedings retained
+RAID,RAID,International Symposium on Research in Attacks Intrusions and Defenses,Security and privacy,2020,2025,https://dblp.org/streams/conf/raid,Main archival research proceedings retained
+DSN,DSN,IEEE and IFIP International Conference on Dependable Systems and Networks,Security and privacy,2020,2025,https://dblp.org/streams/conf/dsn,Main archival research proceedings retained
+PETS/PoPETs,PETS/PoPETs,Privacy Enhancing Technologies Symposium and Proceedings on Privacy Enhancing Technologies,Security and privacy,2020,2025,https://dblp.org/streams/journals/popets,PoPETs research articles presented at PETS retained as one venue
+SIGCOMM,SIGCOMM,ACM SIGCOMM Conference,Networking,2020,2025,https://dblp.org/streams/conf/sigcomm,Main archival research proceedings retained
+NSDI,NSDI,USENIX Symposium on Networked Systems Design and Implementation,Networking,2020,2025,https://dblp.org/streams/conf/nsdi,Main archival research proceedings retained
+CoNEXT,CoNEXT,ACM International Conference on emerging Networking EXperiments and Technologies,Networking,2020,2025,https://dblp.org/streams/conf/conext,Venue-designated short papers excluded including the 2023 short-paper track and main-stream short format from 2024
+SIGMETRICS,SIGMETRICS,ACM SIGMETRICS International Conference on Measurement and Modeling of Computer Systems,Measurement,2020,2025,https://dblp.org/streams/conf/sigmetrics,DBLP main-stream conference records in this period were abstract-only and were excluded
+IMC,IMC,ACM Internet Measurement Conference,Measurement,2020,2025,https://dblp.org/streams/conf/imc,Main archival research proceedings retained
+NeurIPS,NeurIPS,Conference on Neural Information Processing Systems,Artificial intelligence,2020,2025,https://dblp.org/streams/conf/nips,Main proceedings retained and the 2021 full archival Datasets and Benchmarks track retained
+AAAI,AAAI,AAAI Conference on Artificial Intelligence,Artificial intelligence,2020,2025,https://dblp.org/streams/conf/aaai,Main archival research proceedings retained
+The Web Conference (WWW),WWW,The ACM Web Conference,Web,2020,2025,https://dblp.org/streams/conf/www,Main proceedings retained and companion records excluded

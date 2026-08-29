@@ -1,0 +1,12 @@
+priority,scope,implemented_condition,assigned_publication_type,retained_for_candidate_identification,reason_code,matched_records
+1,All venues,RDF type contains editorship,Proceedings container,false,E01,142
+2,PETS/PoPETs,Main venue-year table and RDF type contains article,Full research paper PoPETs article,true,R01,751
+3,All other venues,RDF type contains article,Journal article cross-listed in conference stream,false,E01,390
+4,All venues,Track label or table key contains workshop or an associated-track marker,Non-main or associated track,false,E01,795
+5,All venues,Track label contains companion or the WWW table key is a companion key,Companion paper,false,E01,1710
+6,All venues,Track label table key or title contains poster demo or competition,Poster demo or competition item,false,E02,908
+7,All venues,Track label or title contains abstract or the record is in the SIGMETRICS main table,Abstract-only publication,false,E02,1161
+8,CoNEXT and other explicitly labeled records,Track is designated short paper including CoNEXT short-paper handling,Venue-designated short paper,false,E02,27
+9,NeurIPS 2021,Table key is neurips2021db,Full research paper,true,R01,172
+10,All venues,Table key differs from the expected main venue-year table,Non-main track,false,E01,280
+11,All venues,Record reaches the default main-track rule,Full-paper status to verify,true,R01,42540

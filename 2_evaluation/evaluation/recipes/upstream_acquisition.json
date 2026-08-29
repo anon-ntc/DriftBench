@@ -1,0 +1,134 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "acquisition_manifest_id": "driftbench-seven-family-upstream-acquisition-v1",
+  "status": "public_machine_readable_acquisition_metadata",
+  "value_policy": "Unknown URLs, revisions, and hashes are encoded as not_available; no value is inferred.",
+  "families": {
+    "lim": {
+      "display_name": "LiM",
+      "repository": {
+        "url": "https://github.com/nime-sha256/LiM",
+        "commit": "1b8ca187f7d02a51e595f797e5c200ae740b459f",
+        "evidence": "public repository URL and local checkout HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": false,
+        "url": "not_available",
+        "expected_sha256": "not_available",
+        "target_relative_path": "not_available"
+      }
+    },
+    "nprintml": {
+      "display_name": "nPrintML",
+      "repository": {
+        "url": "https://github.com/nprint/nprintml.git",
+        "commit": "4d9174003782d8f52c2557f327008b65aee5b914",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": false,
+        "url": "not_available",
+        "expected_sha256": "not_available",
+        "target_relative_path": "not_available"
+      },
+      "native_nprint": {
+        "version": "1.2.1",
+        "release_url_template": "https://github.com/nprint/nprint/releases/download/",
+        "exact_archive_url": "not_available",
+        "expected_archive_sha256": "not_available"
+      }
+    },
+    "yatc": {
+      "display_name": "YaTC",
+      "repository": {
+        "url": "https://github.com/NSSL-SJTU/YaTC.git",
+        "commit": "a220b75f8365acaf63dbac7df87aaaa357698b85",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": true,
+        "url": "https://drive.google.com/file/d/1wWmZN87NgwujSd2-o5nm3HaQUIzWlv16/view?usp=drive_link",
+        "expected_sha256": "66314aa57d4364bad0228835a181158f819d10c857936fbbdbae6dc483211fc6",
+        "target_relative_path": "models/YaTC/output_dir/pretrained-model.pth",
+        "evidence": "upstream readme URL and locally authenticated recipe input"
+      }
+    },
+    "trafficformer": {
+      "display_name": "TrafficFormer",
+      "repository": {
+        "url": "https://github.com/IDP-code/TrafficFormer.git",
+        "commit": "6d0ba64d82e74fb130c6c7301ef20885dbfbdf29",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": true,
+        "url": "https://drive.google.com/file/d/1pR6ZaWE7MWFDQWiF4LDzSyjSq0Gj3kV7/view?usp=sharing",
+        "downloaded_archive_expected_sha256": "a288742cff87744d7329565a9e67f131c1b4efff59d0ea02309a27748844b299",
+        "downloaded_archive_target_relative_path": "models/TrafficFormer/models/pretrain_model.zip",
+        "expected_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+        "target_relative_path": "models/TrafficFormer/models/nomoe_bertflow_pre-trained_model.bin-120000",
+        "evidence": "upstream README URL and pinned wrapper inputs"
+      },
+      "supporting_resources": [
+        {
+          "target_relative_path": "models/TrafficFormer/models/encryptd_vocab.txt",
+          "expected_sha256": "c9959ad9dc50e5e73b82e788d2ee4559e1cb0d1b4d7afd0fa452c71a8889dab9"
+        },
+        {
+          "target_relative_path": "models/TrafficFormer/models/bert/base_config.json",
+          "expected_sha256": "13d03fdeaa9df2b621abcf5897c2fec60f5d710070421eaace4ebdd16011a54b"
+        }
+      ]
+    },
+    "mhnet": {
+      "display_name": "MH-Net M8",
+      "repository": {
+        "url": "https://github.com/ViktorAxelsen/MH-Net.git",
+        "commit": "84b5fe213fd4ad0bd235a0cebe280be952571ee2",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": false,
+        "url": "not_available",
+        "expected_sha256": "not_available",
+        "target_relative_path": "not_available"
+      }
+    },
+    "tfe_gnn": {
+      "display_name": "TFE-GNN T4",
+      "repository": {
+        "url": "https://github.com/ViktorAxelsen/TFE-GNN.git",
+        "commit": "e62cb9f1e8b573ae962b0e605f50a1f0daeef1e2",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": false,
+        "url": "not_available",
+        "expected_sha256": "not_available",
+        "target_relative_path": "not_available"
+      }
+    },
+    "etbert": {
+      "display_name": "ET-BERT",
+      "repository": {
+        "url": "https://github.com/linwhitehat/ET-BERT.git",
+        "commit": "d59470624acd11405f9e88da650cf3bf65521e9a",
+        "evidence": "local checkout origin and HEAD"
+      },
+      "pretrained_weight": {
+        "required_by_recipe": true,
+        "url": "https://drive.google.com/file/d/1r1yE34dU2W8zSqx1FkB8gCWri4DQWVtE/view?usp=sharing",
+        "expected_sha256": "10fa968465cc952098e6218658b580cfe53f59db49b63d6f2fa0652365ea4f0b",
+        "target_relative_path": "models/ET-BERT/models/pre-trained_model.bin",
+        "evidence": "upstream README URL and locally authenticated recipe input"
+      },
+      "supporting_resources": [
+        {
+          "target_relative_path": "models/ET-BERT/models/encryptd_vocab.txt",
+          "expected_sha256": "c9959ad9dc50e5e73b82e788d2ee4559e1cb0d1b4d7afd0fa452c71a8889dab9"
+        }
+      ],
+      "recipe_variants": ["etbert"]
+    }
+  }
+}

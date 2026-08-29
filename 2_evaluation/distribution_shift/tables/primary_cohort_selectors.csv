@@ -1,0 +1,13 @@
+selector_id,cohort_role,protocol_id,label_schema_id,configuration_id,split,evaluation_role,sessions,cohort_sha256
+general_2026::C26-U-FF-A::test::general,general_test,general_2026,general_labels_v1,C26-U-FF-A,test,general,450,08d5e2f43a4c589f61aed1990faefada14a8bdb84543a891ee60ab139572cc44
+general_2026::C26-U-FF-B::test::general,general_test,general_2026,general_labels_v1,C26-U-FF-B,test,general,450,a535de0657b902303b3d02b50e7b6d34381487f0981228ad1b889eabe7cc4de5
+general_2026::C26-U-CR-A::test::general,general_test,general_2026,general_labels_v1,C26-U-CR-A,test,general,450,a9872fb70310a760f324fbe5f9bad96e2720fbed141d84b0aeb949f9055d7a6e
+general_2026::C26-U-CR-B::test::general,general_test,general_2026,general_labels_v1,C26-U-CR-B,test,general,450,b85b3f4dc8de6aeac4d1360c826e9362e3067e981a6a68c23e67284f535c0db2
+general_2026::C26-W-FF-A::test::general,general_test,general_2026,general_labels_v1,C26-W-FF-A,test,general,450,9f00304dbaa403aed5b3b615650408a52ffe1d023b282138f5c60c0b5c8ae9ba
+general_2026::C26-W-FF-B::test::general,general_test,general_2026,general_labels_v1,C26-W-FF-B,test,general,450,971a4cf912935bd34434c2c3762c88387686bebcdb300b6b935dcf03b4986e2f
+general_2026::C26-W-CR-A::test::general,general_test,general_2026,general_labels_v1,C26-W-CR-A,test,general,450,f938aaa21406604117f5111a122a07c2809c26e9d7623326d2edc2fe0ae8834f
+general_2026::C26-W-CR-B::test::general,general_test,general_2026,general_labels_v1,C26-W-CR-B,test,general,450,3bd3c06a33ace8b8854556635ae8680727b22c904f57b17d76466d4cae7fda70
+temporal_2024_to_2026::C24-U-FF-A::test::source_test,temporal_source_test,temporal_2024_to_2026,temporal_labels_v1,C24-U-FF-A,test,source_test,450,f5f07a9b37a89ec5a6d443ae8451d7c1a11693f963fd35353e97dec60281cd99
+temporal_2024_to_2026::C24-U-CR-A::test::source_test,temporal_source_test,temporal_2024_to_2026,temporal_labels_v1,C24-U-CR-A,test,source_test,450,c0c0f94818f809d4ef37a2068c1a16d6461fbbb573071ef70127992bf62c6519
+temporal_2024_to_2026::C26-U-FF-A::test::target_test_primary,temporal_target_test,temporal_2024_to_2026,temporal_labels_v1,C26-U-FF-A,test,target_test_primary,450,f6fa91e2c64a6ea628092dbee54f98ff1935cb9604d9d129954c9315a35167b3
+temporal_2024_to_2026::C26-U-CR-A::test::target_test_primary,temporal_target_test,temporal_2024_to_2026,temporal_labels_v1,C26-U-CR-A,test,target_test_primary,450,20df432cd6e3a5a6e7274d47b36d9c0ac564cecdf980fdad021f5b97b9522b6a

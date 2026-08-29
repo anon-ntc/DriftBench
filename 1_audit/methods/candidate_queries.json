@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "text_normalization": {
+    "strip_http_urls": true,
+    "strip_www_urls": true,
+    "lowercase": true,
+    "unicode_normalization": "NFKD",
+    "retained_characters": "a-z 0-9 plus period hyphen",
+    "collapse_whitespace": true
+  },
+  "routes": {
+    "G": {
+      "name": "general recall route",
+      "fields": [
+        "title",
+        "abstract",
+        "publication metadata"
+      ],
+      "membership_file": "../corpus/general_route_components.csv",
+      "components": [
+        "direct title pattern",
+        "abstract promotion pattern",
+        "strong-keyword recall review",
+        "venue-year-stratified quality-assurance sample",
+        "supplemental relevance review"
+      ],
+      "direct_title_patterns": [
+        "(?:encrypted|network|internet|anonymous|mobile|malicious|iot|vpn|tor|tls|https|quic|dns|packet|flow)[- ]+traffic",
+        "traffic[- ]+(?:classification|classifier|identification|recognition|analysis|fingerprint|inference|detection)",
+        "(?:classification|classifier|identification|recognition|fingerprint|inference|detection).{0,45}(?:traffic|packet|flow|pcap|trace)",
+        "(?:traffic|packet|flow|pcap|trace).{0,45}(?:classification|classifier|identification|recognition|fingerprint|inference|detection)",
+        "website fingerprint",
+        "webpage fingerprint",
+        "web fingerprint",
+        "fingerprinting.{0,35}(?:tor|website|webpage|traffic|https|quic|dns)",
+        "(?:tor|website|webpage|https|quic|dns).{0,35}fingerprint",
+        "(?:network|cyber)[- ]+intrusion",
+        "intrusion[- ]+(?:detection|classification|classifier)",
+        "(?:malware|botnet|attack)[- ]+(?:traffic|flow|classification|classifier|family identification)",
+        "(?:application|app|service|protocol|browser|device|activity)[- ]+(?:traffic )?(?:classification|classifier|identification|recognition)",
+        "(?:packet|flow|session|connection)[- ]+(?:based )?(?:classification|classifier|identification|recognition)",
+        "deep packet",
+        "network telemetry.{0,35}(?:classification|classifier|identification|recognition)"
+      ],
+      "strong_keyword_patterns": [
+        "\\btraffic\\b",
+        "\\bpackets?\\b",
+        "\\bnetwork flows?\\b",
+        "\\bflows?\\b.{0,40}\\bclassif",
+        "\\bpcap\\b",
+        "website fingerprint",
+        "webpage fingerprint",
+        "\\bintrusion\\b",
+        "\\bmalware\\b",
+        "\\bbotnet\\b",
+        "\\btls\\b",
+        "\\bhttps\\b",
+        "\\bquic\\b",
+        "\\bvpn\\b",
+        "\\btor\\b",
+        "\\bdns\\b",
+        "encrypted.{0,25}traffic|traffic.{0,25}encrypted",
+        "network.{0,15}trace|trace.{0,15}network",
+        "network.{0,15}anomal",
+        "\\bddos\\b"
+      ],
+      "abstract_promotion_patterns": {
+        "traffic": "(?:network|internet|encrypted|malicious|anonymous|mobile|iot|vpn|tor|tls|https|quic|dns)[- ]+traffic|\\btraffic (?:flows?|traces?|sessions?|classification|classifier|analysis)|\\bpackets?\\b|\\bpcap\\b|website fingerprint|webpage fingerprint|network[- ]flows?|flow[- ]level|packet[- ]level|network trace",
+        "learned": "machine learning|deep learning|neural|transformer|representation learning|contrastive learning|self-supervised|supervised|semi-supervised|classifier|classification|random forest|support vector|gradient boost|autoencoder|graph model|embedding",
+        "task": "classif|identif|recogn|fingerprint|detect|infer|attribut|label|distinguish|categor"
+      },
+      "quality_assurance_sample": {
+        "target": 500,
+        "strata": [
+          "venue",
+          "year"
+        ],
+        "ranking_seed": "2026-08-01",
+        "ranking_key": "dedup_key"
+      },
+      "primary_component_counts": {
+        "direct title pattern": 248,
+        "abstract promotion pattern": 57,
+        "strong-keyword recall review": 465,
+        "venue-year-stratified quality-assurance sample": 499,
+        "supplemental relevance review": 11
+      },
+      "expected_records": 1280
+    },
+    "R": {
+      "name": "grouped title and abstract route",
+      "fields": [
+        "normalized title",
+        "normalized abstract"
+      ],
+      "traffic_patterns": [
+        "\\bnetwork traffic\\b",
+        "\\binternet traffic\\b",
+        "\\bencrypted traffic\\b",
+        "\\btraffic analys(?:is|es)\\b",
+        "\\btraffic classif",
+        "\\btraffic detect",
+        "\\btraffic fingerprint",
+        "\\bpacket(?:s| level| trace| metadata| length)?\\b",
+        "\\bpcap\\b",
+        "\\bnetflow\\b",
+        "\\bnetwork flow(?:s)?\\b",
+        "\\bflow based\\b",
+        "\\bflow level\\b",
+        "\\btraffic trace(?:s)?\\b",
+        "\\bnetwork session(?:s)?\\b",
+        "\\bwebsite fingerprint",
+        "\\bwebpage fingerprint",
+        "\\bapp(?:lication)? fingerprint",
+        "\\bdevice fingerprint",
+        "\\bnetwork intrusion\\b",
+        "\\bnetwork anomaly\\b",
+        "\\bmalicious traffic\\b",
+        "\\bmalware traffic\\b",
+        "\\bbotnet traffic\\b",
+        "\\bddos\\b",
+        "\\bdenial of service\\b",
+        "\\biot traffic\\b",
+        "\\bindustrial traffic\\b",
+        "\\bwireless traffic\\b",
+        "\\bcellular traffic\\b",
+        "\\btor traffic\\b",
+        "\\bvpn traffic\\b",
+        "\\btls traffic\\b",
+        "\\bhttps traffic\\b",
+        "\\bquic traffic\\b",
+        "\\bdns traffic\\b"
+      ],
+      "task_patterns": [
+        "\\bclassif",
+        "\\bdetect",
+        "\\bidentif",
+        "\\brecogn",
+        "\\binfer",
+        "\\bfingerprint",
+        "\\banomal",
+        "\\bintrusion",
+        "\\bmalicious",
+        "\\bmalware",
+        "\\bbotnet",
+        "\\battack",
+        "\\bddos\\b"
+      ],
+      "learning_patterns": [
+        "\\bmachine learning\\b",
+        "\\bml based\\b",
+        "\\bdeep learning\\b",
+        "\\bneural",
+        "\\btransformer",
+        "\\bgraph learning\\b",
+        "\\bgnn\\b",
+        "\\bclassifier",
+        "\\bsupervised",
+        "\\bsemi supervised",
+        "\\bself supervised",
+        "\\brepresentation learning\\b",
+        "\\bcontrastive learning\\b",
+        "\\brandom forest\\b",
+        "\\bsupport vector\\b",
+        "\\bsvm\\b",
+        "\\bautoencoder\\b",
+        "\\bembedding",
+        "\\bensemble learning\\b"
+      ],
+      "selection_rule": "at least one traffic pattern and at least one task pattern",
+      "expected_records": 476
+    },
+    "P": {
+      "name": "protocol and traffic focused title route",
+      "fields": [
+        "title"
+      ],
+      "traffic_pattern": "\\b(?:ssh|internet|vpn|tor|quic|tls|https?|dns|udp|tcp|wireless|wi-fi|wifi|bluetooth|5g|cellular|ads-b|network request|server request|web request|network detection|proxy networks?|network attack|scanning organization|traffic|packet|flow|session|pcap|netflow|intrusion|malware|botnet|ddos)\\b",
+      "task_pattern": "\\b(?:classif\\w*|detect\\w*|identif\\w*|recogn\\w*|infer\\w*|fingerprint\\w*|anomal\\w*|intrusion\\w*|malicious\\w*|malware\\w*|bot\\w*|attack\\w*)\\b",
+      "route_local_exclusion_pattern": "\\btext classification\\b",
+      "selection_rule": "at least one traffic pattern and at least one task pattern and no route-local exclusion pattern",
+      "expected_records": 402
+    }
+  },
+  "expected_overlap": {
+    "G_only": 827,
+    "R_only": 204,
+    "P_only": 82,
+    "G_R_only": 138,
+    "G_P_only": 186,
+    "R_P_only": 5,
+    "G_R_P": 129,
+    "union": 1571
+  }
+}

@@ -1,0 +1,31 @@
+feature,display_name,contrast,contrast_display,median_distance,mean_distance,class_pair_units
+direction,Packet direction,client_browser,Browser only,0.0136045299339,0.0219991324895,40
+direction,Packet direction,client_browser_and_os,Browser + OS,0.202270387048,0.194914304346,40
+direction,Packet direction,client_os,OS only,0.199368082394,0.194914304346,40
+direction,Packet direction,network,Network A/B,0.0137311260332,0.0214544594984,40
+direction,Packet direction,temporal,Temporal,0.0244460720629,0.0241640864936,20
+iat_us,Inter-arrival time,client_browser,Browser only,0.0770293036966,0.100423404636,40
+iat_us,Inter-arrival time,client_browser_and_os,Browser + OS,0.436696308982,0.416041268034,40
+iat_us,Inter-arrival time,client_os,OS only,0.43797952132,0.415012040203,40
+iat_us,Inter-arrival time,network,Network A/B,0.11685544281,0.123890744602,40
+iat_us,Inter-arrival time,temporal,Temporal,0.176809580436,0.189577366335,20
+ip_total_length_bytes,IPv4 total length,client_browser,Browser only,0.0908466540118,0.10948791067,40
+ip_total_length_bytes,IPv4 total length,client_browser_and_os,Browser + OS,0.279739275592,0.295436092047,40
+ip_total_length_bytes,IPv4 total length,client_os,OS only,0.277464976163,0.294072823761,40
+ip_total_length_bytes,IPv4 total length,network,Network A/B,0.0891271020153,0.0982550540621,40
+ip_total_length_bytes,IPv4 total length,temporal,Temporal,0.158758524111,0.159228675168,20
+ipv4_ttl,IPv4 TTL / hop limit,client_browser,Browser only,0.00660472319009,0.0823822365348,40
+ipv4_ttl,IPv4 TTL / hop limit,client_browser_and_os,Browser + OS,0.246378368258,0.29289511197,40
+ipv4_ttl,IPv4 TTL / hop limit,client_os,OS only,0.241684410061,0.249166111724,40
+ipv4_ttl,IPv4 TTL / hop limit,network,Network A/B,0.0130833010711,0.0830604068081,40
+ipv4_ttl,IPv4 TTL / hop limit,temporal,Temporal,3.16413562018e-14,0.0060164559773,20
+tcp_flag_pattern,TCP flag pattern,client_browser,Browser only,0.0206101864898,0.0277789335374,40
+tcp_flag_pattern,TCP flag pattern,client_browser_and_os,Browser + OS,0.14723465167,0.146111068507,40
+tcp_flag_pattern,TCP flag pattern,client_os,OS only,0.153234799997,0.142924850931,40
+tcp_flag_pattern,TCP flag pattern,network,Network A/B,0.0322827903125,0.0441551847036,40
+tcp_flag_pattern,TCP flag pattern,temporal,Temporal,0.109370433032,0.114545759046,20
+tcp_window_raw,Raw TCP window,client_browser,Browser only,0.022312023757,0.0340112231178,40
+tcp_window_raw,Raw TCP window,client_browser_and_os,Browser + OS,0.0762076633864,0.0791589209977,40
+tcp_window_raw,Raw TCP window,client_os,OS only,0.0722201846079,0.0791030733791,40
+tcp_window_raw,Raw TCP window,network,Network A/B,0.0214114114114,0.0290675573045,40
+tcp_window_raw,Raw TCP window,temporal,Temporal,0.413403636742,0.394052005232,20

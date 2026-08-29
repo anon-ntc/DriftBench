@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0",
+  "list_delimiter": " | ",
+  "public_identifier_rules": {
+    "paper_id": "Stable corpus identifier",
+    "dataset_id": "Stable canonical dataset identifier",
+    "use_id": "Deterministic USE identifier",
+    "scheme_id": "Deterministic SCH identifier",
+    "design_id": "Deterministic DES identifier",
+    "evidence_id": "Deterministic EVD identifier",
+    "rq1_scheme_decision_id": "Deterministic R1S identifier",
+    "rq1_dataset_summary_id": "Deterministic R1D identifier",
+    "rq2_design_decision_id": "Deterministic R2D identifier",
+    "rq2_paper_summary_id": "Deterministic R2P identifier"
+  },
+  "enumerations": {
+    "dimension": [
+      "client",
+      "network",
+      "temporal"
+    ],
+    "rq1_outcome": [
+      "supported",
+      "documented_no_support",
+      "not_documented"
+    ],
+    "rq2_outcome": [
+      "documented_holdout",
+      "documented_no_holdout",
+      "not_documented"
+    ],
+    "scheme_eligibility": [
+      "eligible",
+      "excluded"
+    ],
+    "design_eligibility": [
+      "eligible",
+      "excluded"
+    ]
+  },
+  "tables": {
+    "canonical_datasets.csv": {
+      "row_count": 193,
+      "columns": [
+        "dataset_id",
+        "canonical_name",
+        "origin_type",
+        "collection_years",
+        "capture_provenance",
+        "dataset_boundary_basis",
+        "canonical_citation_key",
+        "canonical_citation",
+        "doi",
+        "canonical_url",
+        "identity_confidence",
+        "paper_ids",
+        "scheme_ids",
+        "use_ids",
+        "evidence_ids"
+      ],
+      "primary_key": "dataset_id"
+    },
+    "paper_dataset_uses.csv": {
+      "row_count": 309,
+      "columns": [
+        "use_id",
+        "paper_id",
+        "dataset_id",
+        "reported_names",
+        "evaluation_roles",
+        "task_families",
+        "scheme_ids",
+        "design_ids",
+        "complete_scheme_count",
+        "partial_component_scheme_count",
+        "evidence_ids"
+      ],
+      "primary_key": "use_id"
+    },
+    "class_schemes.csv": {
+      "row_count": 495,
+      "columns": [
+        "scheme_id",
+        "paper_id",
+        "dataset_id",
+        "task_family",
+        "task_name",
+        "label_scheme_key",
+        "label_semantics",
+        "class_cardinality",
+        "cardinality_type",
+        "class_type",
+        "input_units",
+        "design_ids",
+        "component_roles",
+        "complete_scheme_in_dataset",
+        "eligibility_status",
+        "exclusion_reason",
+        "evidence_ids"
+      ],
+      "primary_key": "scheme_id"
+    },
+    "evaluation_designs.csv": {
+      "row_count": 603,
+      "columns": [
+        "design_id",
+        "paper_id",
+        "task_family",
+        "task_name",
+        "label_semantics",
+        "class_cardinality",
+        "class_type",
+        "dataset_ids",
+        "scheme_ids",
+        "training_description",
+        "validation_description",
+        "test_description",
+        "split_design_primary",
+        "split_design_secondary",
+        "split_unit",
+        "split_grouping",
+        "eligibility_status",
+        "exclusion_reason",
+        "evidence_ids"
+      ],
+      "primary_key": "design_id"
+    },
+    "rq1_scheme_decisions.csv": {
+      "row_count": 1341,
+      "columns": [
+        "rq1_scheme_decision_id",
+        "scheme_id",
+        "paper_id",
+        "dataset_id",
+        "dimension",
+        "outcome",
+        "condition_pair",
+        "complete_class_count",
+        "common_pair_class_count",
+        "complete_scheme_verified",
+        "stable_semantics_verified",
+        "condition_membership_recoverable",
+        "fresh_parent_traffic_both_values",
+        "evidence_ids",
+        "decision_basis",
+        "confidence"
+      ],
+      "primary_key": "rq1_scheme_decision_id"
+    },
+    "rq1_dataset_summary.csv": {
+      "row_count": 516,
+      "columns": [
+        "rq1_dataset_summary_id",
+        "dataset_id",
+        "dimension",
+        "outcome",
+        "scheme_count",
+        "supported_scheme_ids",
+        "documented_no_support_scheme_ids",
+        "not_documented_scheme_ids"
+      ],
+      "primary_key": "rq1_dataset_summary_id"
+    },
+    "rq2_design_decisions.csv": {
+      "row_count": 1662,
+      "columns": [
+        "rq2_design_decision_id",
+        "design_id",
+        "paper_id",
+        "scheme_ids",
+        "dimension",
+        "outcome",
+        "condition_pair",
+        "complete_scheme_verified",
+        "condition_grouping_before_sample_split",
+        "parent_captures_disjoint",
+        "condition_status",
+        "evidence_ids",
+        "decision_basis",
+        "confidence"
+      ],
+      "primary_key": "rq2_design_decision_id"
+    },
+    "rq2_paper_summary.csv": {
+      "row_count": 327,
+      "columns": [
+        "rq2_paper_summary_id",
+        "paper_id",
+        "dimension",
+        "outcome",
+        "evaluation_count",
+        "holdout_design_ids",
+        "documented_no_holdout_design_ids",
+        "not_documented_design_ids"
+      ],
+      "primary_key": "rq2_paper_summary_id"
+    },
+    "evidence.csv": {
+      "row_count": 2616,
+      "columns": [
+        "evidence_id",
+        "paper_id",
+        "dataset_id",
+        "scheme_id",
+        "design_id",
+        "dimension",
+        "evidence_type",
+        "source_type",
+        "source_url",
+        "pdf_page",
+        "paper_page_label",
+        "section_or_table",
+        "evidence_text",
+        "confidence"
+      ],
+      "primary_key": "evidence_id"
+    },
+    "structural_corrections.csv": {
+      "row_count": 79,
+      "columns": [
+        "normalization_id",
+        "entity_type",
+        "operation",
+        "public_entity_ids",
+        "normalized_field",
+        "normalized_value",
+        "evidence_ids",
+        "decision_basis"
+      ],
+      "primary_key": "normalization_id"
+    },
+    "condition_interpretation_decisions.csv": {
+      "row_count": 77,
+      "columns": [
+        "condition_decision_id",
+        "record_type",
+        "decision_record_id",
+        "outcome",
+        "condition_pair",
+        "decision_basis"
+      ],
+      "primary_key": "condition_decision_id"
+    }
+  },
+  "foreign_keys": [
+    {
+      "table": "canonical_datasets.csv",
+      "column": "paper_ids",
+      "references": "../corpus/included_papers.csv.paper_id",
+      "list": true
+    },
+    {
+      "table": "canonical_datasets.csv",
+      "column": "scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "canonical_datasets.csv",
+      "column": "use_ids",
+      "references": "paper_dataset_uses.csv.use_id",
+      "list": true
+    },
+    {
+      "table": "canonical_datasets.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "paper_dataset_uses.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "paper_dataset_uses.csv",
+      "column": "dataset_id",
+      "references": "canonical_datasets.csv.dataset_id"
+    },
+    {
+      "table": "paper_dataset_uses.csv",
+      "column": "scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "paper_dataset_uses.csv",
+      "column": "design_ids",
+      "references": "evaluation_designs.csv.design_id",
+      "list": true
+    },
+    {
+      "table": "paper_dataset_uses.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "class_schemes.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "class_schemes.csv",
+      "column": "dataset_id",
+      "references": "canonical_datasets.csv.dataset_id"
+    },
+    {
+      "table": "class_schemes.csv",
+      "column": "design_ids",
+      "references": "evaluation_designs.csv.design_id",
+      "list": true
+    },
+    {
+      "table": "class_schemes.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "evaluation_designs.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "evaluation_designs.csv",
+      "column": "dataset_ids",
+      "references": "canonical_datasets.csv.dataset_id",
+      "list": true
+    },
+    {
+      "table": "evaluation_designs.csv",
+      "column": "scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "evaluation_designs.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "rq1_scheme_decisions.csv",
+      "column": "scheme_id",
+      "references": "class_schemes.csv.scheme_id"
+    },
+    {
+      "table": "rq1_scheme_decisions.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "rq1_scheme_decisions.csv",
+      "column": "dataset_id",
+      "references": "canonical_datasets.csv.dataset_id"
+    },
+    {
+      "table": "rq1_scheme_decisions.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "rq1_dataset_summary.csv",
+      "column": "dataset_id",
+      "references": "canonical_datasets.csv.dataset_id"
+    },
+    {
+      "table": "rq1_dataset_summary.csv",
+      "column": "supported_scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "rq1_dataset_summary.csv",
+      "column": "documented_no_support_scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "rq1_dataset_summary.csv",
+      "column": "not_documented_scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "rq2_design_decisions.csv",
+      "column": "design_id",
+      "references": "evaluation_designs.csv.design_id"
+    },
+    {
+      "table": "rq2_design_decisions.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "rq2_design_decisions.csv",
+      "column": "scheme_ids",
+      "references": "class_schemes.csv.scheme_id",
+      "list": true
+    },
+    {
+      "table": "rq2_design_decisions.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    },
+    {
+      "table": "rq2_paper_summary.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id"
+    },
+    {
+      "table": "rq2_paper_summary.csv",
+      "column": "holdout_design_ids",
+      "references": "evaluation_designs.csv.design_id",
+      "list": true
+    },
+    {
+      "table": "rq2_paper_summary.csv",
+      "column": "documented_no_holdout_design_ids",
+      "references": "evaluation_designs.csv.design_id",
+      "list": true
+    },
+    {
+      "table": "rq2_paper_summary.csv",
+      "column": "not_documented_design_ids",
+      "references": "evaluation_designs.csv.design_id",
+      "list": true
+    },
+    {
+      "table": "evidence.csv",
+      "column": "paper_id",
+      "references": "../corpus/included_papers.csv.paper_id",
+      "optional": true
+    },
+    {
+      "table": "evidence.csv",
+      "column": "dataset_id",
+      "references": "canonical_datasets.csv.dataset_id",
+      "optional": true
+    },
+    {
+      "table": "evidence.csv",
+      "column": "scheme_id",
+      "references": "class_schemes.csv.scheme_id",
+      "optional": true
+    },
+    {
+      "table": "evidence.csv",
+      "column": "design_id",
+      "references": "evaluation_designs.csv.design_id",
+      "optional": true
+    },
+    {
+      "table": "structural_corrections.csv",
+      "column": "evidence_ids",
+      "references": "evidence.csv.evidence_id",
+      "list": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "lock_id": "driftbench-lim-runtime-lock-v1",
+  "model_family": "lim",
+  "python": "3.12.3",
+  "accelerator": "none",
+  "packages": {
+    "dpkt": "1.9.8",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "xgboost": "2.1.1"
+  }
+}

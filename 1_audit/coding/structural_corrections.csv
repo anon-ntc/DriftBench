@@ -1,0 +1,80 @@
+normalization_id,entity_type,operation,public_entity_ids,normalized_field,normalized_value,evidence_ids,decision_basis
+SN0001,dataset,canonicalize_dataset_boundary,DS-KDDCUP-99,,,,NSL-KDD is treated as a cleaned release within the KDD Cup 1999 source boundary.
+SN0002,dataset,canonicalize_dataset_boundary,DS-P42427-FOAP-AUTO,,,,The FOAP alias and the automated FOAP corpus identify the same collected source.
+SN0003,dataset,canonicalize_dataset_boundary,DS-MALWARE-TRAFFIC-ANALYSIS-NET,,,,The paper-specific Malware Traffic Analysis selection is a component of the named archive rather than a new source.
+SN0004,dataset,replace_composite_with_source_datasets,DS-MAWI | DS-BOOTERS-2015 | DS-CIC-DDOS-2019 | DS-SUCURI-SSDP-2014,,,EVD1842,The fused scenarios combine independently collected traffic sources and are not a new collected dataset.
+SN0005,dataset,replace_composite_with_source_datasets,DS-MAWI | DS-CIC-DDOS-2019,,,EVD1716,The synthesized FlowSentry input combines MAWI benign traffic with CIC-DDoS2019 attack traffic and is not a new collected source.
+SN0006,dataset,retain_source_provenance,DS-FRGP-MIRAI-2016,,,EVD1848,Retain source provenance even though this source does not supply a qualifying complete or partial classifier scheme.
+SN0007,dataset,retain_source_provenance,DS-P39403-SELF-ATTACK-2021,,,EVD1830,Retain source provenance for the separately collected one-class attack set.
+SN0008,design,merge_equivalent_designs,DES0018,,,,The PCAP and compound representations use the same partition and are one evaluation design.
+SN0009,design,merge_equivalent_designs,DES0019,,,,The PCAP and compound representations use the same partition and are one evaluation design.
+SN0010,design,merge_equivalent_designs,DES0533,,,,The two classifier variants share one training and test construction.
+SN0011,design,set_normalized_field,DES0018,task_name,CIC-AndMal2017 malware detection across PCAP and compound representations,,Merged representation variants share one evaluation partition.
+SN0012,design,set_normalized_field,DES0019,task_name,ZooBazzar 2024 malware detection across PCAP and compound representations,,Merged representation variants share one evaluation partition.
+SN0013,design,set_normalized_field,DES0533,task_name,IDS2017 to IDS2018 supervised multiclass transfer,,Merged classifier variants share one evaluation partition.
+SN0014,design,set_normalized_field,DES0036,dataset_ids,DS-MAWI | DS-CIC-DDOS-2019,EVD1716,Replace the synthesized composite with its independently collected traffic sources.
+SN0015,design,set_normalized_field,DES0036,scheme_ids,SCH0114 | SCH0111,EVD1716,Link the design to the two partial component schemes.
+SN0016,design,set_normalized_field,DES0150,dataset_ids,DS-MAWI | DS-BOOTERS-2015 | DS-CIC-DDOS-2019 | DS-SUCURI-SSDP-2014,EVD1842,Replace the fused composite with the four independently collected traffic sources.
+SN0017,design,set_normalized_field,DES0150,scheme_ids,SCH0271 | SCH0269 | SCH0270 | SCH0272,EVD1842,Link the standard design to all four partial component schemes.
+SN0018,design,set_normalized_field,DES0147,dataset_ids,DS-MAWI | DS-BOOTERS-2015 | DS-CIC-DDOS-2019 | DS-SUCURI-SSDP-2014,EVD1842,Replace the fused composite with the four independently collected traffic sources.
+SN0019,design,set_normalized_field,DES0147,scheme_ids,SCH0271 | SCH0269 | SCH0270 | SCH0272,EVD1842,Link the Booters design to all four partial component schemes.
+SN0020,design,set_normalized_field,DES0149,dataset_ids,DS-MAWI | DS-BOOTERS-2015 | DS-CIC-DDOS-2019 | DS-SUCURI-SSDP-2014,EVD1842,Replace the fused composite with the four independently collected traffic sources.
+SN0021,design,set_normalized_field,DES0149,scheme_ids,SCH0271 | SCH0269 | SCH0270 | SCH0272,EVD1842,Link the dynamic design to all four partial component schemes.
+SN0022,design,set_normalized_field,DES0148,dataset_ids,DS-MAWI,EVD1841,The cost experiment uses only MAWI traffic.
+SN0023,design,set_normalized_field,DES0148,scheme_ids,SCH0271,EVD1841,The cost experiment uses only the MAWI partial component scheme.
+SN0024,design,set_normalized_field,DES0167,dataset_ids,DS-P43793-FBSAD | DS-P43793-LAB-VALIDATION,EVD1870 | EVD1871,Remove the unrelated MSAD source from this design.
+SN0025,design,set_normalized_field,DES0170,dataset_ids,DS-P43793-FBSAD | DS-P43793-LAB-VALIDATION,EVD1870 | EVD1871,Remove the unrelated MSAD source from this design.
+SN0026,design,set_normalized_field,DES0168,dataset_ids,DS-P43793-MSAD | DS-P43793-LAB-VALIDATION,EVD1872 | EVD1871,Remove the unrelated FBSAD source from this design.
+SN0027,design,set_normalized_field,DES0197,task_family,endpoint_or_platform_identification,EVD2358,The fixed labels identify device operating-system and software-agent combinations.
+SN0028,design,set_normalized_field,DES0201,task_family,endpoint_or_platform_identification,EVD2385,The fixed labels identify device operating-system and software-agent combinations.
+SN0029,design,set_normalized_field,DES0204,task_family,semantic_inference,EVD2404,The fixed labels are website identities.
+SN0030,scheme,create_distinct_scheme,SCH0114,,,,Represent the independently collected benign component as a partial scheme.
+SN0031,scheme,set_normalized_field,SCH0114,dataset_id,DS-MAWI,,The MAWI source supplies the negative class only.
+SN0032,scheme,set_normalized_field,SCH0114,design_ids,DES0036,,The partial component contributes to the FlowSentry design.
+SN0033,scheme,set_normalized_field,SCH0114,component_roles,negative_only,,The MAWI source supplies benign traffic only.
+SN0034,scheme,set_normalized_field,SCH0114,complete_scheme_in_dataset,no,,The source does not contain the full binary scheme.
+SN0035,scheme,create_distinct_scheme,SCH0111,,,,Represent the independently collected attack component as a partial scheme.
+SN0036,scheme,set_normalized_field,SCH0111,dataset_id,DS-CIC-DDOS-2019,,The CIC-DDoS2019 source supplies the positive class only.
+SN0037,scheme,set_normalized_field,SCH0111,design_ids,DES0036,,The partial component contributes to the FlowSentry design.
+SN0038,scheme,set_normalized_field,SCH0111,component_roles,positive_only,,The CIC-DDoS2019 source supplies attack traffic only.
+SN0039,scheme,set_normalized_field,SCH0111,complete_scheme_in_dataset,no,,The source does not contain the full binary scheme.
+SN0040,scheme,replace_combined_scheme,SCH0114 | SCH0111,,,EVD1716,Remove the composite complete scheme after creating its two partial source schemes.
+SN0041,scheme,replace_combined_scheme,SCH0271 | SCH0269 | SCH0270 | SCH0272,,,EVD1842,The fused scenario row is not a canonical dataset scheme.
+SN0042,scheme,create_distinct_scheme,SCH0028,,,,Split the VPN and non-VPN tasks into separate complete schemes.
+SN0043,scheme,set_normalized_field,SCH0028,task_name,ISCX-VPN application classification,,This row represents the VPN task only.
+SN0044,scheme,set_normalized_field,SCH0028,label_scheme_key,iscx-vpn application identity|6,,This row represents the VPN task only.
+SN0045,scheme,set_normalized_field,SCH0028,design_ids,DES0250,EVD1894,This row represents the VPN design only.
+SN0046,scheme,set_normalized_field,SCH0028,evidence_ids,EVD1894,EVD1894,Use design-specific evidence.
+SN0047,scheme,create_distinct_scheme,SCH0026,,,,Split the VPN and non-VPN tasks into separate complete schemes.
+SN0048,scheme,set_normalized_field,SCH0026,task_name,ISCX-NonVPN application classification,,This row represents the non-VPN task only.
+SN0049,scheme,set_normalized_field,SCH0026,label_scheme_key,iscx-nonvpn application identity|6,,This row represents the non-VPN task only.
+SN0050,scheme,set_normalized_field,SCH0026,design_ids,DES0251,EVD1895,This row represents the non-VPN design only.
+SN0051,scheme,set_normalized_field,SCH0026,evidence_ids,EVD1895,EVD1895,Use design-specific evidence.
+SN0052,scheme,replace_combined_scheme,SCH0028 | SCH0026,,,,Remove the combined row after the two complete task rows are created.
+SN0053,scheme,create_distinct_scheme,SCH0027,,,,Split the Tor and non-Tor tasks into separate complete schemes.
+SN0054,scheme,set_normalized_field,SCH0027,task_name,ISCX-Tor application classification,,This row represents the Tor task only.
+SN0055,scheme,set_normalized_field,SCH0027,label_scheme_key,iscx-tor service identity|8,,This row represents the Tor task only.
+SN0056,scheme,set_normalized_field,SCH0027,design_ids,DES0252,EVD1896,This row represents the Tor design only.
+SN0057,scheme,set_normalized_field,SCH0027,evidence_ids,EVD1896,EVD1896,Use design-specific evidence.
+SN0058,scheme,create_distinct_scheme,SCH0025,,,,Split the Tor and non-Tor tasks into separate complete schemes.
+SN0059,scheme,set_normalized_field,SCH0025,task_name,ISCX-NonTor application classification,,This row represents the non-Tor task only.
+SN0060,scheme,set_normalized_field,SCH0025,label_scheme_key,iscx-nontor service identity|8,,This row represents the non-Tor task only.
+SN0061,scheme,set_normalized_field,SCH0025,design_ids,DES0253,EVD1897,This row represents the non-Tor design only.
+SN0062,scheme,set_normalized_field,SCH0025,evidence_ids,EVD1897,EVD1897,Use design-specific evidence.
+SN0063,scheme,replace_combined_scheme,SCH0027 | SCH0025,,,,Remove the combined row after the two complete task rows are created.
+SN0064,scheme,create_distinct_scheme,SCH0404,,,,Split the random-site and censorship-site schemes.
+SN0065,scheme,set_normalized_field,SCH0404,task_name,Closed-world random-site fingerprinting,,This row represents the random-site labels.
+SN0066,scheme,set_normalized_field,SCH0404,label_scheme_key,random-site website identity|320,,This row represents the random-site label set.
+SN0067,scheme,set_normalized_field,SCH0404,design_ids,DES0542,EVD2206,Link only the random-site design.
+SN0068,scheme,set_normalized_field,SCH0404,evidence_ids,EVD2206 | EVD1876,EVD2206,Use random-site evidence.
+SN0069,scheme,create_distinct_scheme,SCH0403,,,,Split the random-site and censorship-site schemes.
+SN0070,scheme,set_normalized_field,SCH0403,task_name,Closed-world censorship-site fingerprinting | Padding-aware defended website fingerprinting | Padding-unaware defended website fingerprinting,,This row represents the censorship-site labels and their transformed copies.
+SN0071,scheme,set_normalized_field,SCH0403,label_scheme_key,censorship-site website identity|320,,This row represents the censorship-site label set.
+SN0072,scheme,set_normalized_field,SCH0403,design_ids,DES0543 | DES0551 | DES0552,EVD2207 | EVD2215 | EVD2216,Link only censorship-site designs.
+SN0073,scheme,set_normalized_field,SCH0403,evidence_ids,EVD2207 | EVD2215 | EVD2216 | EVD1876,EVD2207 | EVD2215 | EVD2216,Use censorship-site evidence.
+SN0074,scheme,replace_combined_scheme,SCH0404 | SCH0403,,,,Remove the combined row after the two complete task rows are created.
+SN0075,scheme,link_related_units,SCH0269,design_ids,DES0150 | DES0149,EVD1850,The standard and dynamic designs use the Booters component.
+SN0076,scheme,link_related_units,SCH0270,design_ids,DES0147,EVD1850,The Booters design uses the CIC-DDoS2019 attack component.
+SN0077,scheme,link_related_units,SCH0272,design_ids,DES0147,EVD1850,The Booters design uses the Sucuri attack component.
+SN0078,scheme,link_related_units,SCH0100,design_ids,DES0026,EVD1712,The deployment design evaluates this complete scheme.
+SN0079,scheme,link_related_units,SCH0221,design_ids,DES0129 | DES0130,EVD1793,The enhanced and obfuscated designs evaluate this complete scheme.

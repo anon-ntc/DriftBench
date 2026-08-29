@@ -1,0 +1,17 @@
+item,records
+included_papers,109
+canonical_dataset_registry,193
+qualifying_used_datasets,191
+paper_dataset_uses,309
+class_scheme_registry,495
+complete_class_schemes,447
+partial_class_schemes,47
+evaluation_design_registry,603
+eligible_evaluation_designs,554
+rq1_scheme_condition_decisions,1341
+rq1_canonical_datasets,172
+rq1_dataset_condition_summaries,516
+rq2_design_condition_decisions,1662
+rq2_papers,109
+rq2_paper_condition_summaries,327
+source_located_evidence,2616

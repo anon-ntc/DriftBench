@@ -1,0 +1,61 @@
+feature,display_name,contrast,contrast_display,direction_stratum,median_distance,mean_distance,class_pair_units
+frame_length_bytes,Captured frame length,client_browser,Browser only,c2s,0.125227048398,0.17791038056,40
+frame_length_bytes,Captured frame length,client_browser_and_os,Browser + OS,c2s,0.211520561911,0.212668539168,40
+frame_length_bytes,Captured frame length,client_os,OS only,c2s,0.180114961769,0.201653207629,40
+frame_length_bytes,Captured frame length,network,Network A/B,c2s,0.0546023729357,0.073409159161,40
+frame_length_bytes,Captured frame length,temporal,Temporal,c2s,0.176960455409,0.188826560203,20
+iat_us,Inter-arrival time,client_browser,Browser only,c2s,0.148017991708,0.162879810929,40
+iat_us,Inter-arrival time,client_browser_and_os,Browser + OS,c2s,0.398998517577,0.392382805701,40
+iat_us,Inter-arrival time,client_os,OS only,c2s,0.38481331238,0.388767113847,40
+iat_us,Inter-arrival time,network,Network A/B,c2s,0.0978155111799,0.102940736366,40
+iat_us,Inter-arrival time,temporal,Temporal,c2s,0.291992455859,0.288863470112,20
+ip_total_length_bytes,IPv4 total length,client_browser,Browser only,c2s,0.125227048398,0.17791038056,40
+ip_total_length_bytes,IPv4 total length,client_browser_and_os,Browser + OS,c2s,0.211520561911,0.212668539168,40
+ip_total_length_bytes,IPv4 total length,client_os,OS only,c2s,0.180114961769,0.201653207629,40
+ip_total_length_bytes,IPv4 total length,network,Network A/B,c2s,0.0546023729357,0.073409159161,40
+ip_total_length_bytes,IPv4 total length,temporal,Temporal,c2s,0.176960455409,0.188826560203,20
+ipv4_ttl,IPv4 TTL / hop limit,client_browser,Browser only,c2s,1.72084568817e-15,0.05,40
+ipv4_ttl,IPv4 TTL / hop limit,client_browser_and_os,Browser + OS,c2s,1,0.95,40
+ipv4_ttl,IPv4 TTL / hop limit,client_os,OS only,c2s,1,0.95,40
+ipv4_ttl,IPv4 TTL / hop limit,network,Network A/B,c2s,1.94289029309e-15,0.05,40
+ipv4_ttl,IPv4 TTL / hop limit,temporal,Temporal,c2s,3.38618022511e-15,4.09117184574e-15,20
+tcp_payload_length_bytes,TCP payload length,client_browser,Browser only,c2s,0.125227048398,0.17791038056,40
+tcp_payload_length_bytes,TCP payload length,client_browser_and_os,Browser + OS,c2s,0.211520561911,0.212668539168,40
+tcp_payload_length_bytes,TCP payload length,client_os,OS only,c2s,0.180114961769,0.201653207629,40
+tcp_payload_length_bytes,TCP payload length,network,Network A/B,c2s,0.0546023729357,0.073409159161,40
+tcp_payload_length_bytes,TCP payload length,temporal,Temporal,c2s,0.176960455409,0.188826560203,20
+tcp_window_raw,Raw TCP window,client_browser,Browser only,c2s,0.100140216926,0.108784895852,40
+tcp_window_raw,Raw TCP window,client_browser_and_os,Browser + OS,c2s,0.291554769927,0.290092882053,40
+tcp_window_raw,Raw TCP window,client_os,OS only,c2s,0.300348504981,0.288654350393,40
+tcp_window_raw,Raw TCP window,network,Network A/B,c2s,0.0620805737472,0.081601307442,40
+tcp_window_raw,Raw TCP window,temporal,Temporal,c2s,0.952317636306,0.910144808599,20
+frame_length_bytes,Captured frame length,client_browser,Browser only,s2c,0.0841417518583,0.119153294717,40
+frame_length_bytes,Captured frame length,client_browser_and_os,Browser + OS,s2c,0.424315353855,0.424274828749,40
+frame_length_bytes,Captured frame length,client_os,OS only,s2c,0.435144013451,0.435849559691,40
+frame_length_bytes,Captured frame length,network,Network A/B,s2c,0.126414574738,0.145656552053,40
+frame_length_bytes,Captured frame length,temporal,Temporal,s2c,0.229461966143,0.240591084773,20
+iat_us,Inter-arrival time,client_browser,Browser only,s2c,0.0935324083327,0.101537625066,40
+iat_us,Inter-arrival time,client_browser_and_os,Browser + OS,s2c,0.559694542614,0.53527732015,40
+iat_us,Inter-arrival time,client_os,OS only,s2c,0.558312085843,0.533270776292,40
+iat_us,Inter-arrival time,network,Network A/B,s2c,0.173735479953,0.184782578142,40
+iat_us,Inter-arrival time,temporal,Temporal,s2c,0.247397972481,0.258479821459,20
+ip_total_length_bytes,IPv4 total length,client_browser,Browser only,s2c,0.0841417518583,0.119153294717,40
+ip_total_length_bytes,IPv4 total length,client_browser_and_os,Browser + OS,s2c,0.424315353855,0.42434269491,40
+ip_total_length_bytes,IPv4 total length,client_os,OS only,s2c,0.436679418588,0.435977361092,40
+ip_total_length_bytes,IPv4 total length,network,Network A/B,s2c,0.126414574738,0.145656552053,40
+ip_total_length_bytes,IPv4 total length,temporal,Temporal,s2c,0.229461966143,0.240591084773,20
+ipv4_ttl,IPv4 TTL / hop limit,client_browser,Browser only,s2c,4.66293670343e-15,0.107222222222,40
+ipv4_ttl,IPv4 TTL / hop limit,client_browser_and_os,Browser + OS,s2c,9.54791801178e-15,0.107222222222,40
+ipv4_ttl,IPv4 TTL / hop limit,client_os,OS only,s2c,9.7699626167e-15,0.00722222222223,40
+ipv4_ttl,IPv4 TTL / hop limit,network,Network A/B,s2c,3.71924713249e-15,0.107222222222,40
+ipv4_ttl,IPv4 TTL / hop limit,temporal,Temporal,s2c,4.60742555219e-15,0.0109344821845,20
+tcp_payload_length_bytes,TCP payload length,client_browser,Browser only,s2c,0.0841417518583,0.119153294717,40
+tcp_payload_length_bytes,TCP payload length,client_browser_and_os,Browser + OS,s2c,0.424315353855,0.42434269491,40
+tcp_payload_length_bytes,TCP payload length,client_os,OS only,s2c,0.436679418588,0.435977361092,40
+tcp_payload_length_bytes,TCP payload length,network,Network A/B,s2c,0.126414574738,0.145656552053,40
+tcp_payload_length_bytes,TCP payload length,temporal,Temporal,s2c,0.229461966143,0.240591084773,20
+tcp_window_raw,Raw TCP window,client_browser,Browser only,s2c,4.4408920985e-15,5.83699755197e-15,40
+tcp_window_raw,Raw TCP window,client_browser_and_os,Browser + OS,s2c,8.10462807976e-15,9.11770658973e-15,40
+tcp_window_raw,Raw TCP window,client_os,OS only,s2c,9.7699626167e-15,9.40636457614e-15,40
+tcp_window_raw,Raw TCP window,network,Network A/B,s2c,3.10862446895e-15,4.84889906005e-15,40
+tcp_window_raw,Raw TCP window,temporal,Temporal,s2c,4.60742555219e-15,0.0109344821845,20

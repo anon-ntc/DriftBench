@@ -1,0 +1,39 @@
+{
+  "evaluation_rows_per_model": 44,
+  "fit_policy": {
+    "evaluate_target_test_without_fitting": true,
+    "schema_reuse_forbidden": true,
+    "select_on_source_validation_only": true,
+    "train_on_source_train_only": true
+  },
+  "split_protocol": {
+    "unit": "session",
+    "per_class": {
+      "train": 210,
+      "validation": 45,
+      "test": 45
+    },
+    "per_ten_class_task": {
+      "train": 2100,
+      "validation": 450,
+      "test": 450
+    }
+  },
+  "models": [
+    "lim",
+    "nprintml",
+    "yatc",
+    "trafficformer",
+    "mhnet",
+    "tfe_gnn",
+    "etbert"
+  ],
+  "planned_seed_model_evaluation_jobs": 924,
+  "representation": "sanitized_payload_start_v1",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "version": "driftbench-payload-start-public-evaluation-spec-v1"
+}

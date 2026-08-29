@@ -1,0 +1,118 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "specification_id": "driftbench-payload-start-open-science-44-cell-unified-v1",
+  "status": "declarative_dry_run_recipe",
+  "execution_policy": {
+    "default": "dry_run_only",
+    "command_emission_requires": "--emit-commands",
+    "command_emission_executes_workloads": false,
+    "execution_supported": false,
+    "subprocess_execution_implemented": false,
+    "reference_argv_executable": false,
+    "deterministic_order": "model order, evaluation ordinal, seed"
+  },
+  "included_payload_types": [
+    "evaluation specification",
+    "preprocessing and training recipes",
+    "logical workload plans",
+    "reference command templates"
+  ],
+  "bundled_empirical_outputs": false,
+  "models": [
+    "lim",
+    "nprintml",
+    "yatc",
+    "trafficformer",
+    "mhnet",
+    "tfe_gnn",
+    "etbert"
+  ],
+  "seeds": [0, 1, 2],
+  "source_configurations": [
+    "C26-U-FF-A",
+    "C26-U-FF-B",
+    "C26-U-CR-A",
+    "C26-U-CR-B",
+    "C26-W-FF-A",
+    "C26-W-FF-B",
+    "C26-W-CR-A",
+    "C26-W-CR-B",
+    "C24-U-FF-A",
+    "C24-U-CR-A"
+  ],
+  "count_contract": {
+    "models": 7,
+    "evaluation_cells_per_model": 44,
+    "cross_cells_per_model": 34,
+    "matched_cells_per_model": 10,
+    "seeds": 3,
+    "logical_evaluation_jobs": 924
+  },
+  "source_authorities": {
+    "frozen_44_cell_plan": {
+      "repository_relative_path": "artifacts/driftbench_v2_payload_start_44_evaluation_spec_v1/evaluation_plan.csv",
+      "sha256": "a7627bcdf7df8579e8f1f560f4c4e171cd1a43fd863ed6f6824b7d28d5053e09"
+    },
+    "frozen_44_cell_protocol": {
+      "repository_relative_path": "artifacts/driftbench_v2_payload_start_44_evaluation_spec_v1/protocol.json",
+      "sha256": "3a2d36bddae37aab406fae5ae83c94e1b03dba080bd74326311b77ce204fdcec"
+    }
+  },
+  "cell_fields": [
+    "ordinal",
+    "evaluation_id",
+    "evaluation_kind",
+    "condition",
+    "protocol_id",
+    "label_schema_id",
+    "source_configuration_id",
+    "target_configuration_id",
+    "class_count"
+  ],
+  "cells": [
+    [1, "E001", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-U-FF-A", "C26-U-CR-A", 10],
+    [2, "E002", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-U-CR-A", "C26-U-FF-A", 10],
+    [3, "E003", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-U-FF-B", "C26-U-CR-B", 10],
+    [4, "E004", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-U-CR-B", "C26-U-FF-B", 10],
+    [5, "E005", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-W-FF-A", "C26-W-CR-A", 10],
+    [6, "E006", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-W-CR-A", "C26-W-FF-A", 10],
+    [7, "E007", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-W-FF-B", "C26-W-CR-B", 10],
+    [8, "E008", "cross_condition", "client_browser", "general_2026", "general_labels_v1", "C26-W-CR-B", "C26-W-FF-B", 10],
+    [9, "E009", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-U-FF-A", "C26-W-FF-A", 10],
+    [10, "E010", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-W-FF-A", "C26-U-FF-A", 10],
+    [11, "E011", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-U-FF-B", "C26-W-FF-B", 10],
+    [12, "E012", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-W-FF-B", "C26-U-FF-B", 10],
+    [13, "E013", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-U-CR-A", "C26-W-CR-A", 10],
+    [14, "E014", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-W-CR-A", "C26-U-CR-A", 10],
+    [15, "E015", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-U-CR-B", "C26-W-CR-B", 10],
+    [16, "E016", "cross_condition", "client_os", "general_2026", "general_labels_v1", "C26-W-CR-B", "C26-U-CR-B", 10],
+    [17, "E017", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-U-FF-A", "C26-W-CR-A", 10],
+    [18, "E018", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-W-CR-A", "C26-U-FF-A", 10],
+    [19, "E019", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-U-CR-A", "C26-W-FF-A", 10],
+    [20, "E020", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-W-FF-A", "C26-U-CR-A", 10],
+    [21, "E021", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-U-FF-B", "C26-W-CR-B", 10],
+    [22, "E022", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-W-CR-B", "C26-U-FF-B", 10],
+    [23, "E023", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-U-CR-B", "C26-W-FF-B", 10],
+    [24, "E024", "cross_condition", "client_browser_and_os", "general_2026", "general_labels_v1", "C26-W-FF-B", "C26-U-CR-B", 10],
+    [25, "E025", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-U-FF-A", "C26-U-FF-B", 10],
+    [26, "E026", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-U-FF-B", "C26-U-FF-A", 10],
+    [27, "E027", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-U-CR-A", "C26-U-CR-B", 10],
+    [28, "E028", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-U-CR-B", "C26-U-CR-A", 10],
+    [29, "E029", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-W-FF-A", "C26-W-FF-B", 10],
+    [30, "E030", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-W-FF-B", "C26-W-FF-A", 10],
+    [31, "E031", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-W-CR-A", "C26-W-CR-B", 10],
+    [32, "E032", "cross_condition", "network", "general_2026", "general_labels_v1", "C26-W-CR-B", "C26-W-CR-A", 10],
+    [33, "E033", "cross_condition", "temporal", "temporal_2024_to_2026", "temporal_labels_v1", "C24-U-FF-A", "C26-U-FF-A", 10],
+    [34, "E034", "cross_condition", "temporal", "temporal_2024_to_2026", "temporal_labels_v1", "C24-U-CR-A", "C26-U-CR-A", 10],
+    [35, "E035", "matched_reference", "matched", "temporal_2024_to_2026", "temporal_labels_v1", "C24-U-FF-A", "C24-U-FF-A", 10],
+    [36, "E036", "matched_reference", "matched", "temporal_2024_to_2026", "temporal_labels_v1", "C24-U-CR-A", "C24-U-CR-A", 10],
+    [37, "E037", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-U-FF-A", "C26-U-FF-A", 10],
+    [38, "E038", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-U-FF-B", "C26-U-FF-B", 10],
+    [39, "E039", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-U-CR-A", "C26-U-CR-A", 10],
+    [40, "E040", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-U-CR-B", "C26-U-CR-B", 10],
+    [41, "E041", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-W-FF-A", "C26-W-FF-A", 10],
+    [42, "E042", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-W-FF-B", "C26-W-FF-B", 10],
+    [43, "E043", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-W-CR-A", "C26-W-CR-A", 10],
+    [44, "E044", "matched_reference", "matched", "general_2026", "general_labels_v1", "C26-W-CR-B", "C26-W-CR-B", 10]
+  ]
+}

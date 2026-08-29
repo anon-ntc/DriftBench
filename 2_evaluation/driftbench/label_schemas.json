@@ -1,0 +1,49 @@
+{
+  "general_only_class_names": [],
+  "schema_isolation_required": false,
+  "schemas": {
+    "general_labels": {
+      "label_map": {
+        "adblockplus.org": 0,
+        "arin.net": 1,
+        "flipboard.com": 2,
+        "garmin.com": 3,
+        "getpocket.com": 4,
+        "joinhoney.com": 5,
+        "trustarc.com": 6,
+        "ubuntu.com": 7,
+        "waze.com": 8,
+        "web.de": 9
+      },
+      "protocol_id": "general_2026"
+    },
+    "temporal_labels": {
+      "label_map": {
+        "adblockplus.org": 0,
+        "arin.net": 1,
+        "flipboard.com": 2,
+        "garmin.com": 3,
+        "getpocket.com": 4,
+        "joinhoney.com": 5,
+        "trustarc.com": 6,
+        "ubuntu.com": 7,
+        "waze.com": 8,
+        "web.de": 9
+      },
+      "protocol_id": "temporal_2024_to_2026"
+    }
+  },
+  "shared_class_names": [
+    "adblockplus.org",
+    "arin.net",
+    "flipboard.com",
+    "garmin.com",
+    "getpocket.com",
+    "joinhoney.com",
+    "trustarc.com",
+    "ubuntu.com",
+    "waze.com",
+    "web.de"
+  ],
+  "temporal_only_class_names": []
+}

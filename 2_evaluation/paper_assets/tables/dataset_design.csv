@@ -1,0 +1,15 @@
+protocol_id,panel,configuration_id,campaign,os,browser,network,sessions,train_sessions,validation_sessions,test_sessions
+general_2026,general_2026,C26-U-CR-A,2026,ubuntu,chromium,network-a,3000,2100,450,450
+general_2026,general_2026,C26-U-CR-B,2026,ubuntu,chromium,network-b,3000,2100,450,450
+general_2026,general_2026,C26-U-FF-A,2026,ubuntu,firefox,network-a,3000,2100,450,450
+general_2026,general_2026,C26-U-FF-B,2026,ubuntu,firefox,network-b,3000,2100,450,450
+general_2026,general_2026,C26-W-CR-A,2026,windows,chromium,network-a,3000,2100,450,450
+general_2026,general_2026,C26-W-CR-B,2026,windows,chromium,network-b,3000,2100,450,450
+general_2026,general_2026,C26-W-FF-A,2026,windows,firefox,network-a,3000,2100,450,450
+general_2026,general_2026,C26-W-FF-B,2026,windows,firefox,network-b,3000,2100,450,450
+temporal_2024_to_2026,temporal_2024_source,C24-U-CR-A,2024,ubuntu,chromium,network-a,3000,2100,450,450
+temporal_2024_to_2026,temporal_2024_source,C24-U-FF-A,2024,ubuntu,firefox,network-a,3000,2100,450,450
+temporal_2024_to_2026,temporal_2026_target,C26-U-CR-A,2026,ubuntu,chromium,network-a,450,0,0,450
+temporal_2024_to_2026,temporal_2026_target,C26-U-FF-A,2026,ubuntu,firefox,network-a,450,0,0,450
+temporal_2024_to_2026,temporal_2026_target,C26-W-CR-A,2026,windows,chromium,network-a,450,0,0,450
+temporal_2024_to_2026,temporal_2026_target,C26-W-FF-A,2026,windows,firefox,network-a,450,0,0,450

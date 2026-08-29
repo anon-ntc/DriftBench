@@ -1,0 +1,14 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "lock_id": "driftbench-tfe-gnn-t4-runtime-lock-v1",
+  "model_family": "tfe_gnn",
+  "python": "3.12.3",
+  "accelerator": "CUDA 13.0",
+  "packages": {
+    "dgl": "2.1.0",
+    "numpy": "1.26.4",
+    "scapy": "2.7.0",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0+cu130"
+  }
+}

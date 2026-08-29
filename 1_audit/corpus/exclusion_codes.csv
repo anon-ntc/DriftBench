@@ -1,0 +1,16 @@
+code,label,definition
+I01,Included,At least one central passive learned fixed-label traffic task qualifies
+E01,Out of publication boundary,Track or publication is outside the fixed archival venue boundary
+E02,Non-full publication,"Short paper, poster, demo, abstract, companion item, or other non-full item"
+E03,No qualifying traffic input,"Classifier-facing population is not passive packets, flows, sessions, or traffic traces"
+E04,No learned classifier,"Decision is rule, lookup, signature, hypothesis-test, or threshold based"
+E05,No supervised fixed-label task,"One-class, unsupervised anomaly, clustering, or equivalent non-qualifying scheme"
+E06,Classification ancillary,Classification is not a central contribution or central evaluated task
+E07,"Rule, lookup, or DPI only","Rule, lookup, signature, or DPI-only decision"
+E08,Active probing,Classifier depends on deliberately elicited remote responses
+E09,Defense or obfuscation,"Defense, obfuscation, or mitigation without a separable qualifying task"
+E10,Adversarial or generative support,Adversarial generation or traffic generation with only support classification
+E11,Pure multilabel task,No qualifying mutually exclusive label scheme
+E12,Operational or support label,"Transport, routing, measurement, or other operational label"
+E13,Non-primary classifier study,"Survey, SoK, replication, dataset, benchmark, or framework without a central qualifier"
+U01,Insufficient authoritative text,Paper-level eligibility cannot be resolved from authoritative text or metadata

@@ -1,0 +1,97 @@
+venue,venue_family,year,enumerated_records,retained_records,candidate_records,included_papers,dblp_stream_url,dblp_toc_url,official_proceedings_url,coverage_status,retrieval_date
+AAAI,Artificial intelligence,2020,1865,1711,37,0,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2020.html,https://aaai.org/proceeding/aaai-34-2020/,Complete,2026-08-01
+AAAI,Artificial intelligence,2021,1962,1843,39,0,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2021.html,https://aaai.org/proceeding/aaai-35-2021/,Complete,2026-08-01
+AAAI,Artificial intelligence,2022,1625,1492,25,0,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2022.html,https://aaai.org/proceeding/aaai-36-2022/,Complete,2026-08-01
+AAAI,Artificial intelligence,2023,2037,1868,39,2,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2023.html,https://aaai.org/proceeding/aaai-37-2023/,Complete,2026-08-01
+AAAI,Artificial intelligence,2024,2870,2687,43,0,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2024.html,https://aaai.org/proceeding/aaai-38-2024/,Complete,2026-08-01
+AAAI,Artificial intelligence,2025,3511,3371,64,4,https://dblp.org/streams/conf/aaai,https://dblp.org/db/conf/aaai/aaai2025.html,https://aaai.org/proceeding/aaai-39-2025/,Complete,2026-08-01
+ACM CCS,Security and privacy,2020,149,148,18,0,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2020.html,https://doi.org/10.1145/3372297,Complete,2026-08-01
+ACM CCS,Security and privacy,2021,226,214,23,1,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2021.html,https://doi.org/10.1145/3460120,Complete,2026-08-01
+ACM CCS,Security and privacy,2022,288,232,14,1,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2022.html,https://doi.org/10.1145/3548606,Complete,2026-08-01
+ACM CCS,Security and privacy,2023,293,245,20,1,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2023.html,https://doi.org/10.1145/3576915,Complete,2026-08-01
+ACM CCS,Security and privacy,2024,419,361,24,2,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2024.html,https://doi.org/10.1145/3658644,Complete,2026-08-01
+ACM CCS,Security and privacy,2025,396,351,33,7,https://dblp.org/streams/conf/ccs,https://dblp.org/db/conf/ccs/ccs2025.html,https://doi.org/10.1145/3719027,Complete,2026-08-01
+AsiaCCS,Security and privacy,2020,88,70,13,3,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2020.html,https://doi.org/10.1145/3320269,Complete,2026-08-01
+AsiaCCS,Security and privacy,2021,74,73,13,1,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2021.html,https://doi.org/10.1145/3433210,Complete,2026-08-01
+AsiaCCS,Security and privacy,2022,113,111,19,0,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2022.html,https://doi.org/10.1145/3488932,Complete,2026-08-01
+AsiaCCS,Security and privacy,2023,89,76,4,1,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2023.html,https://doi.org/10.1145/3579856,Complete,2026-08-01
+AsiaCCS,Security and privacy,2024,144,132,15,2,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2024.html,https://doi.org/10.1145/3634737,Complete,2026-08-01
+AsiaCCS,Security and privacy,2025,126,114,16,2,https://dblp.org/streams/conf/asiaccs,https://dblp.org/db/conf/asiaccs/asiaccs2025.html,https://doi.org/10.1145/3708821,Complete,2026-08-01
+CoNEXT,Networking,2020,64,62,18,0,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2020.html,https://doi.org/10.1145/3386367,Complete,2026-08-01
+CoNEXT,Networking,2021,51,50,16,1,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2021.html,https://doi.org/10.1145/3485983,Complete,2026-08-01
+CoNEXT,Networking,2022,29,28,11,3,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2022.html,https://doi.org/10.1145/3555050,Complete,2026-08-01
+CoNEXT,Networking,2023,44,0,0,0,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2023c.html,https://doi.org/10.1145/3624354,Complete,2026-08-01
+CoNEXT,Networking,2024,53,0,0,0,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2024.html,https://doi.org/10.1145/3680121,Complete,2026-08-01
+CoNEXT,Networking,2025,82,0,0,0,https://dblp.org/streams/conf/conext,https://dblp.org/db/conf/conext/conext2025.html,https://doi.org/10.1145/3765515,Complete,2026-08-01
+DSN,Security and privacy,2020,111,48,9,0,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2020.html,https://ieeexplore.ieee.org/xpl/conhome/9145511/proceeding,Complete,2026-08-01
+DSN,Security and privacy,2021,111,49,6,0,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2021.html,https://doi.org/10.1109/DSN48987.2021,Complete,2026-08-01
+DSN,Security and privacy,2022,103,49,9,0,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2022.html,https://doi.org/10.1109/DSN53405.2022,Complete,2026-08-01
+DSN,Security and privacy,2023,150,48,11,2,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2023.html,https://doi.org/10.1109/DSN58367.2023,Complete,2026-08-01
+DSN,Security and privacy,2024,101,43,5,1,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2024.html,https://doi.org/10.1109/DSN58291.2024,Complete,2026-08-01
+DSN,Security and privacy,2025,173,56,10,3,https://dblp.org/streams/conf/dsn,https://dblp.org/db/conf/dsn/dsn2025.html,https://doi.org/10.1109/DSN-S65789.2025,Complete,2026-08-01
+IEEE S&P,Security and privacy,2020,156,103,10,2,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2020.html,https://ieeexplore.ieee.org/xpl/conhome/9144328/proceeding,Complete,2026-08-01
+IEEE S&P,Security and privacy,2021,174,114,5,0,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2021.html,https://doi.org/10.1109/SP40001.2021,Complete,2026-08-01
+IEEE S&P,Security and privacy,2022,186,147,13,0,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2022.html,https://doi.org/10.1109/SP46214.2022,Complete,2026-08-01
+IEEE S&P,Security and privacy,2023,238,199,13,0,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2023.html,https://doi.org/10.1109/SP46215.2023,Complete,2026-08-01
+IEEE S&P,Security and privacy,2024,299,260,18,1,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2024.html,https://doi.org/10.1109/SP54263.2024,Complete,2026-08-01
+IEEE S&P,Security and privacy,2025,308,255,21,3,https://dblp.org/streams/conf/sp,https://dblp.org/db/conf/sp/sp2025.html,https://doi.org/10.1109/SP61157.2025,Complete,2026-08-01
+IMC,Measurement,2020,55,54,17,0,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2020.html,https://doi.org/10.1145/3419394,Complete,2026-08-01
+IMC,Measurement,2021,55,54,19,0,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2021.html,https://doi.org/10.1145/3487552,Complete,2026-08-01
+IMC,Measurement,2022,77,75,24,0,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2022.html,https://doi.org/10.1145/3517745,Complete,2026-08-01
+IMC,Measurement,2023,64,52,20,0,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2023.html,https://doi.org/10.1145/3618257,Complete,2026-08-01
+IMC,Measurement,2024,85,55,17,1,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2024.html,https://doi.org/10.1145/3646547,Complete,2026-08-01
+IMC,Measurement,2025,100,73,11,1,https://dblp.org/streams/conf/imc,https://dblp.org/db/conf/imc/imc2025.html,https://doi.org/10.1145/3730567,Complete,2026-08-01
+NDSS,Security and privacy,2020,90,89,14,2,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2020.html,https://www.ndss-symposium.org/ndss2020/,Complete,2026-08-01
+NDSS,Security and privacy,2021,88,86,8,2,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2021.html,https://www.ndss-symposium.org/ndss2021/,Complete,2026-08-01
+NDSS,Security and privacy,2022,84,83,9,1,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2022.html,https://www.ndss-symposium.org/ndss2022/,Complete,2026-08-01
+NDSS,Security and privacy,2023,95,94,7,0,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2023.html,https://www.ndss-symposium.org/ndss2023/,Complete,2026-08-01
+NDSS,Security and privacy,2024,141,139,11,1,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2024.html,https://www.ndss-symposium.org/ndss2024/,Complete,2026-08-01
+NDSS,Security and privacy,2025,212,211,19,2,https://dblp.org/streams/conf/ndss,https://dblp.org/db/conf/ndss/ndss2025.html,https://www.ndss-symposium.org/ndss2025/,Complete,2026-08-01
+NSDI,Networking,2020,66,64,3,0,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2020.html,https://www.usenix.org/conference/nsdi20,Complete,2026-08-01
+NSDI,Networking,2021,60,59,5,0,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2021.html,https://www.usenix.org/conference/nsdi21,Complete,2026-08-01
+NSDI,Networking,2022,79,76,9,1,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2022.html,https://www.usenix.org/conference/nsdi22,Complete,2026-08-01
+NSDI,Networking,2023,97,96,6,0,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2023.html,https://www.usenix.org/conference/nsdi23,Complete,2026-08-01
+NSDI,Networking,2024,113,109,12,2,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2024.html,https://www.usenix.org/conference/nsdi24,Complete,2026-08-01
+NSDI,Networking,2025,84,83,11,1,https://dblp.org/streams/conf/nsdi,https://dblp.org/db/conf/nsdi/nsdi2025.html,https://www.usenix.org/conference/nsdi25,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2020,1899,1889,25,0,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2020.html,https://proceedings.neurips.cc/paper/2020,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2021,2531,2483,31,0,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2021.html,https://proceedings.neurips.cc/paper/2021,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2022,2908,2803,38,0,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2022.html,https://papers.nips.cc/paper_files/paper/2022,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2023,3541,3497,52,1,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2023.html,https://papers.nips.cc/paper_files/paper/2023,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2024,4495,4450,65,0,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2024.html,https://papers.nips.cc/paper_files/paper/2024,Complete,2026-08-01
+NeurIPS,Artificial intelligence,2025,4574,4541,68,1,https://dblp.org/streams/conf/nips,https://dblp.org/db/conf/nips/neurips2025.html,https://papers.nips.cc/paper_files/paper/2025,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2020,83,83,16,3,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2020.html,https://petsymposium.org/popets/2020/,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2021,85,85,14,2,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2021.html,https://petsymposium.org/popets/2021/,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2022,132,132,10,1,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2022.html,https://petsymposium.org/popets/2022/,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2023,127,127,9,1,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2023.html,https://petsymposium.org/popets/2023/,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2024,151,151,10,1,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2024.html,https://petsymposium.org/popets/2024/,Complete,2026-08-01
+PETS/PoPETs,Security and privacy,2025,173,173,10,2,https://dblp.org/streams/journals/popets,https://dblp.org/db/journals/popets/popets2025.html,https://petsymposium.org/popets/2025/,Complete,2026-08-01
+RAID,Security and privacy,2020,32,31,3,0,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2020.html,https://www.usenix.org/conference/raid2020,Complete,2026-08-01
+RAID,Security and privacy,2021,33,32,6,0,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2021.html,https://doi.org/10.1145/3471621,Complete,2026-08-01
+RAID,Security and privacy,2022,36,35,8,2,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2022.html,https://doi.org/10.1145/3545948,Complete,2026-08-01
+RAID,Security and privacy,2023,51,50,14,1,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2023.html,https://doi.org/10.1145/3607199,Complete,2026-08-01
+RAID,Security and privacy,2024,44,43,12,2,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2024.html,https://doi.org/10.1145/3678890,Complete,2026-08-01
+RAID,Security and privacy,2025,63,62,11,2,https://dblp.org/streams/conf/raid,https://dblp.org/db/conf/raid/raid2025.html,https://doi.org/10.1109/RAID67961.2025,Complete,2026-08-01
+SIGCOMM,Networking,2020,90,53,10,0,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2020.html,https://doi.org/10.1145/3387514,Complete,2026-08-01
+SIGCOMM,Networking,2021,87,54,9,0,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2021.html,https://doi.org/10.1145/3452296,Complete,2026-08-01
+SIGCOMM,Networking,2022,78,55,14,1,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2022.html,https://doi.org/10.1145/3544216,Complete,2026-08-01
+SIGCOMM,Networking,2023,108,70,14,1,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2023.html,https://doi.org/10.1145/3603269,Complete,2026-08-01
+SIGCOMM,Networking,2024,109,62,15,0,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2024.html,https://doi.org/10.1145/3651890,Complete,2026-08-01
+SIGCOMM,Networking,2025,156,87,21,2,https://dblp.org/streams/conf/sigcomm,https://dblp.org/db/conf/sigcomm/sigcomm2025.html,https://doi.org/10.1145/3718958,Complete,2026-08-01
+SIGMETRICS,Measurement,2020,104,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2020.html,https://doi.org/10.1145/3393691,Complete,2026-08-01
+SIGMETRICS,Measurement,2021,100,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2021.html,https://doi.org/10.1145/3410220,Complete,2026-08-01
+SIGMETRICS,Measurement,2022,101,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2022.html,https://doi.org/10.1145/3489048,Complete,2026-08-01
+SIGMETRICS,Measurement,2023,109,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2023.html,https://doi.org/10.1145/3578338,Complete,2026-08-01
+SIGMETRICS,Measurement,2024,81,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2024.html,https://doi.org/10.1145/3652963,Complete,2026-08-01
+SIGMETRICS,Measurement,2025,111,0,0,0,https://dblp.org/streams/conf/sigmetrics,https://dblp.org/db/conf/sigmetrics/sigmetrics2025.html,https://doi.org/10.1145/3726854,Complete,2026-08-01
+The Web Conference (WWW),Web,2020,506,316,12,1,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2020.html,https://doi.org/10.1145/3366423,Complete,2026-08-01
+The Web Conference (WWW),Web,2021,489,353,15,1,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2021.html,https://doi.org/10.1145/3442381,Complete,2026-08-01
+The Web Conference (WWW),Web,2022,594,367,8,1,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2022.html,https://doi.org/10.1145/3485447,Complete,2026-08-01
+The Web Conference (WWW),Web,2023,701,405,17,5,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2023.html,https://doi.org/10.1145/3543507,Complete,2026-08-01
+The Web Conference (WWW),Web,2024,780,431,21,4,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2024.html,https://doi.org/10.1145/3589334,Complete,2026-08-01
+The Web Conference (WWW),Web,2025,980,446,19,2,https://dblp.org/streams/conf/www,https://dblp.org/db/conf/www/www2025.html,https://doi.org/10.1145/3696410,Complete,2026-08-01
+USENIX Security,Security and privacy,2020,227,158,10,1,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2020.html,https://www.usenix.org/conference/usenixsecurity20,Complete,2026-08-01
+USENIX Security,Security and privacy,2021,298,244,23,0,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2021.html,https://www.usenix.org/conference/usenixsecurity21,Complete,2026-08-01
+USENIX Security,Security and privacy,2022,314,256,21,5,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2022.html,https://www.usenix.org/conference/usenixsecurity22,Complete,2026-08-01
+USENIX Security,Security and privacy,2023,467,421,32,5,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2023.html,https://www.usenix.org/conference/usenixsecurity23,Complete,2026-08-01
+USENIX Security,Security and privacy,2024,485,417,24,1,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2024.html,https://www.usenix.org/conference/usenixsecurity24,Complete,2026-08-01
+USENIX Security,Security and privacy,2025,490,439,28,3,https://dblp.org/streams/conf/uss,https://dblp.org/db/conf/uss/uss2025.html,https://www.usenix.org/conference/usenixsecurity25,Complete,2026-08-01

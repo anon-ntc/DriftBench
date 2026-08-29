@@ -1,0 +1,17 @@
+{
+  "release_version": "driftbench-open-science-evaluation-v1",
+  "lock_id": "driftbench-nprintml-runtime-lock-v1",
+  "model_family": "nprintml",
+  "python": "3.9.15",
+  "accelerator": "none",
+  "native_tools": {"nprint": "1.2.1"},
+  "packages": {
+    "autogluon.tabular": "0.6.2",
+    "nprintml": "1.1.2",
+    "numpy": "1.23.5",
+    "pandas": "1.5.1",
+    "pyarrow": "10.0.1",
+    "scikit-learn": "1.1.3",
+    "scipy": "1.9.3"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "aggregate_statistics": {
+    "bootstrap_generator": "PCG64",
+    "bootstrap_master_seed": 20260824,
+    "bootstrap_repetitions": 10000,
+    "confidence_intervals": "deterministic 95% percentile bootstrap",
+    "summary": [
+      "count",
+      "mean",
+      "median",
+      "q25",
+      "q75",
+      "iqr",
+      "maximum"
+    ],
+    "unit": "complete class/configuration-pair distance row"
+  },
+  "causal_warning": "Observed shifts are plausible input-distribution mechanisms only; they do not establish that any field caused classifier failure.",
+  "claim_scope": "descriptive_input_distribution_shift_not_causal",
+  "first40": {
+    "distance_minimum_sessions_each_arm": 2,
+    "low_support_rows_retained_but_not_summarized_or_plotted": true,
+    "padding": false,
+    "positions": [
+      1,
+      40
+    ],
+    "primary_summary_minimum_sessions_each_arm": 10,
+    "sequential_composite_note": "The requested six positional views are averaged equally and reported separately; signed length, direction, and payload length are partly redundant and are not mixed into the marginal composite.",
+    "source_analysis_positions": [
+      1,
+      50
+    ]
+  },
+  "marginal_composite": {
+    "families_equal_weight": [
+      "size_packetization",
+      "host_path",
+      "direction_flags",
+      "timing"
+    ],
+    "redundant_reported_fields": [
+      "frame_length_bytes",
+      "tcp_payload_length_bytes"
+    ],
+    "size_representative": "ip_total_length_bytes"
+  },
+  "marginal_estimators": {
+    "categorical_distance": "total_variation",
+    "distance_range": [
+      0,
+      1
+    ],
+    "ks_p_values_reported": false,
+    "numeric_distance": "weighted_two_sample_ks",
+    "primary": "equal_session_mass_divided_across_valid_packets",
+    "sensitivity": "ordinary_packet_pooled"
+  },
+  "packet_parsing": {
+    "absolute_timestamps_published_or_analyzed": false,
+    "direction_derivation": "client 10/8 versus server 172.16/12 ranges",
+    "endpoint_values_published": false,
+    "iat_definition": "adjacent retained-packet integer-microsecond difference",
+    "input": "sanitized payload-start v1.2 canonical Ethernet/IPv4/TCP PCAPs",
+    "position_1_iat": "missing"
+  },
+  "primary_cohort": {
+    "description": "symmetric frozen held-out evaluation cohorts",
+    "duplicate_protocol_views_preserved": true,
+    "general_2026_sessions": 3488,
+    "retained_packets": 179089,
+    "temporal_protocol_views": 1800,
+    "total_protocol_views": 5288
+  },
+  "privacy_and_exclusions": {
+    "addresses_ports_sequence_ack_checksums_paths_hashes_absent": true,
+    "encrypted_payload_values_excluded": true,
+    "fin_or_rst_flag_patterns_marked_termination_sensitive": true,
+    "packet_observations_publish_only_analysis_local_session_ordinal": true,
+    "termination_dependent_session_aggregates_excluded": true
+  },
+  "sensitivity_cohort": {
+    "description": "general-2026 all train/validation/test sessions",
+    "reason": "temporal source and target split roles are asymmetric",
+    "retained_packets": 845137,
+    "session_views": 23272,
+    "temporal_all_session_pooling_performed": false
+  },
+  "source_analysis_version": "driftbench-payload-start-distribution-shift-v1",
+  "version": "driftbench-open-science-distribution-assets-v1"
+}
